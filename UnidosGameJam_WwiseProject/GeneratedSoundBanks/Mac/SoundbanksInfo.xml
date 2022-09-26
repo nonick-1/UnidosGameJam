@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>/Users/josueemmanuelle/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/UnidosGameJam/UnidosGameJam_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/josueemmanuelle/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/UnidosGameJam/UnidosGameJam_WwiseProject/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/josueemmanuelle/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/UnidosGameJam/UnidosGameJam_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/josueemmanuelle/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/UnidosGameJam/UnidosGameJam_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2754342975">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2469504869" Language="SFX" Hash="1384818260">
+			<ObjectPath>\SoundBanks\Default Work Unit\Master_SoundBank</ObjectPath>
+			<ShortName>Master_SoundBank</ShortName>
+			<Path>Master_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1550126206" Name="Play_AmbienceTest" ObjectPath="\Events\Default Work Unit\Play_AmbienceTest" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="476193791" Language="SFX">
+							<ShortName>AMBIENCE INSIDE_01.wav</ShortName>
+							<Path>SFX/AMBIENCE INSIDE_01_8F45830E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

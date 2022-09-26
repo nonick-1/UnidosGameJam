@@ -9,9 +9,9 @@
   <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
-  <WwiseInstallationPathMac />
+  <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2021.1.10.7883/Wwise.app</WwiseInstallationPathMac>
   <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2021.1.10.7883</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../UnidosGameJam_WwiseProject/UnidosGameJam_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../../UnidosGameJam/UnidosGameJam_WwiseProject/UnidosGameJam_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>

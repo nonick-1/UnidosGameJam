@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1550126206	Play_AmbienceTest			\Default Work Unit\Play_AmbienceTest	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	476193791	AMBIENCE INSIDE_01	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Mac\SFX\AMBIENCE INSIDE_01_8F45830E.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMBIENCE INSIDE_01		1207681
+

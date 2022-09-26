@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="AMBIENCE INSIDE_01" ID="{7DF530A6-F1F6-4206-8417-ECE089E795E7}" ShortID="358390135">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FDBCAE12-3BC6-4DCF-8088-0D29E5F76186}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{01C2F48E-ACAF-4B95-98DA-C1D59214C944}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="AMBIENCE INSIDE_01" ID="{30E58C35-1B4B-4D91-B48E-365B8E844C96}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.107685329232996"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.107685329232993"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="5.49195179088278"/>
+								<Property Name="TrimEnd" Type="Real64" Value="66.4418481367583"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>AMBIENCE INSIDE_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="476193791"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="AMBIENCE INSIDE_01" ID="{30E58C35-1B4B-4D91-B48E-365B8E844C96}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
