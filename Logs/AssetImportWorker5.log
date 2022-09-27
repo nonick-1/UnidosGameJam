@@ -161,3 +161,111 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4082.818377 seconds.
+  path: Assets/Textures/Sprites/Characters/character2.png
+  artifactKey: Guid(a29c5a791824f55418af526a36c62c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Sprites/Characters/character2.png using Guid(a29c5a791824f55418af526a36c62c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daeca87cbf0ea1a29ac0bcecdf2dc6f8') in 0.325261 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.631242 seconds.
+  path: Assets/Textures/Sprites/Characters/character3.png
+  artifactKey: Guid(51ecf01da708afc418d48fe045352c96) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Textures/Sprites/Characters/character3.png using Guid(51ecf01da708afc418d48fe045352c96) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b9d88c04eece81bc02f82477c79ff3b7') in 0.162184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 668.134653 seconds.
+  path: Assets/Textures/Sprites/Food/alpastor2.png
+  artifactKey: Guid(8b4986d63983e2a45b14f98386d5cf87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Sprites/Food/alpastor2.png using Guid(8b4986d63983e2a45b14f98386d5cf87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e674cd9cc9bc8bf7f813323092cc748f') in 0.013873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Textures/Sprites/Food/cebolla.png
+  artifactKey: Guid(b6027824420f9334b8d3c13004d2a086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Sprites/Food/cebolla.png using Guid(b6027824420f9334b8d3c13004d2a086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6229388c7735bef535f5397ccf998420') in 0.011033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Textures/Sprites/Food/cilantrro.png
+  artifactKey: Guid(40ba23a5bfd6fb348add9a19a8b1bd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Sprites/Food/cilantrro.png using Guid(40ba23a5bfd6fb348add9a19a8b1bd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dbf02189c1678adec5b975179a875d4') in 0.011388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Textures/Sprites/Food/carneasada3.png
+  artifactKey: Guid(3f26ab8a04a9a2f4c94faa1faee8ef37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Sprites/Food/carneasada3.png using Guid(3f26ab8a04a9a2f4c94faa1faee8ef37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99bd9a81f181ccd7da2555110e0780ed') in 0.010046 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.950196 seconds.
+  path: Assets/Textures/Sprites/Food/cebolla.png
+  artifactKey: Guid(b6027824420f9334b8d3c13004d2a086) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Textures/Sprites/Food/cebolla.png using Guid(b6027824420f9334b8d3c13004d2a086) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3624815394a76d6f4a647c03d671ad73') in 0.026132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Textures/Sprites/Food/alpastor3.png
+  artifactKey: Guid(1a0ee2e0a92e75145b2a70cb7566db18) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Textures/Sprites/Food/alpastor3.png using Guid(1a0ee2e0a92e75145b2a70cb7566db18) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '633fab9214f4c6702ff92dd215909d18') in 0.025569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Textures/Sprites/Food/carneasada2.png
+  artifactKey: Guid(53ffce1eb502b4642b88a598b0b5e38d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Textures/Sprites/Food/carneasada2.png using Guid(53ffce1eb502b4642b88a598b0b5e38d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e46014773df2c6bc568a6c47ba1b9952') in 0.026992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Textures/Sprites/Food/alpastor2.png
+  artifactKey: Guid(8b4986d63983e2a45b14f98386d5cf87) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Textures/Sprites/Food/alpastor2.png using Guid(8b4986d63983e2a45b14f98386d5cf87) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '442c243e3e49d1e7d3d00b223d95a131') in 0.028044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.056876 seconds.
+  path: Assets/Textures/Sprites/Food/alpastor3.png
+  artifactKey: Guid(1a0ee2e0a92e75145b2a70cb7566db18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Sprites/Food/alpastor3.png using Guid(1a0ee2e0a92e75145b2a70cb7566db18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3b85703ad35c5da626e9af9ebb60fe3') in 0.012032 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Textures/Sprites/Food/cilantrro.png
+  artifactKey: Guid(40ba23a5bfd6fb348add9a19a8b1bd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Sprites/Food/cilantrro.png using Guid(40ba23a5bfd6fb348add9a19a8b1bd1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a791958979fded4300e6a51c46bc8c1') in 0.012525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Textures/Sprites/Food/carneasada2.png
+  artifactKey: Guid(53ffce1eb502b4642b88a598b0b5e38d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Sprites/Food/carneasada2.png using Guid(53ffce1eb502b4642b88a598b0b5e38d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37119d9f1f859ea18b6d7363cb355f98') in 0.012976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.907977 seconds.
+  path: Assets/Textures/Sprites/Food/cilantrro.png
+  artifactKey: Guid(40ba23a5bfd6fb348add9a19a8b1bd1b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Textures/Sprites/Food/cilantrro.png using Guid(40ba23a5bfd6fb348add9a19a8b1bd1b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '60cfa861f28a474543be2cef61233f93') in 0.024709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Textures/Sprites/Food/alpastor1.png
+  artifactKey: Guid(3c0d2b54e6ce10d40b29f382ae0debbc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Textures/Sprites/Food/alpastor1.png using Guid(3c0d2b54e6ce10d40b29f382ae0debbc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '22d2cc6df9472fb9ae58d74aeb09ac16') in 0.026829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Textures/Sprites/Food/carneasada1.png
+  artifactKey: Guid(646301a576b62e84382d3ff35b709467) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Textures/Sprites/Food/carneasada1.png using Guid(646301a576b62e84382d3ff35b709467) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5e64a4fec409716c61ce559f4a4b85a5') in 0.029153 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
