@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum Doneness { Raw = 0, Cooked = 1, Burnt = 2}
+public enum IngredientTypes { Tortilla, Meat}
 
 public class Ingredient : MonoBehaviour
 {
+    [SerializeField] IngredientTypes currentIngredientType;
     Doneness currentDoneness = Doneness.Raw;
 
     bool isCooking;
@@ -30,9 +32,15 @@ public class Ingredient : MonoBehaviour
         currentSpriteRend = GetComponent<SpriteRenderer>();
     }
 
+    public IngredientTypes GetCurrentIngredientType()
+    {
+        return currentIngredientType;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (EquipmentHovered = collision.GetComponent<Equipment>())
+        EquipmentHovered = collision.GetComponent<Equipment>();
+        if (EquipmentHovered && EquipmentHovered.GetIngredientsAllowed() == currentIngredientType)
         {
             Debug.Log("Is over valid equipment!");
             IsOverValidEquipment = true;
@@ -41,14 +49,7 @@ public class Ingredient : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log($"Collision Out: {collision}");
 
-        if (collision.GetComponent<Equipment>())
-        {
-            Debug.Log("Is not over valid equipment!");
-            IsOverValidEquipment = false;
-            EquipmentHovered = null;
-        }
     }
 
     private void Update()

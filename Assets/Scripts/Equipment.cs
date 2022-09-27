@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class Equipment : MonoBehaviour
 {
-    [SerializeField] int currentOfFoodItemsHeld;
-    [SerializeField] int amountOfFoodItemsCanHold;
-
-    [SerializeField] List<Ingredient> ingredientsAllowed;
+    [SerializeField] IngredientTypes ingredientAllowed;
     [SerializeField] List<AreaPosition> ingredientPositions;
 
     [SerializeField] Sprite mouseOverCookingIcon;
@@ -28,25 +25,11 @@ public class Equipment : MonoBehaviour
     //    Cursor.SetCursor(defaultCursorTexture, hotSpot, cursorMode);
     //}
 
-    private GameObject GetFreeKitchenArea()
-    {
-        foreach(AreaPosition areaPosition in ingredientPositions)
-        {
-            if (!areaPosition.isPositionTaken)
-            {
-                areaPosition.isPositionTaken = true;
-                return areaPosition.position;
-            }
-        }
-
-        return null;
-    }
-
     public bool IsAbleToPlaceItem(Ingredient currentHeldIngredient)
     {
         foreach(var areaPosition in ingredientPositions)
         {
-            if(!areaPosition.isPositionTaken && !ingredientsAllowed.Contains(currentHeldIngredient))
+            if(!areaPosition.isPositionTaken && ingredientAllowed == currentHeldIngredient.GetCurrentIngredientType())
             {
                 areaPosition.isPositionTaken = true;
                 currentHeldIngredient.gameObject.transform.position = areaPosition.position.transform.position;
@@ -59,6 +42,11 @@ public class Equipment : MonoBehaviour
         }
 
         return false;
+    }
+
+    public IngredientTypes GetIngredientsAllowed()
+    {
+        return ingredientAllowed;
     }
 }
 
