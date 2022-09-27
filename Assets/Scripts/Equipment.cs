@@ -42,7 +42,7 @@ public class Equipment : MonoBehaviour
         return null;
     }
 
-    public void IsAbleToPlaceItem(Ingredient currentHeldIngredient)
+    public bool IsAbleToPlaceItem(Ingredient currentHeldIngredient)
     {
         foreach(var areaPosition in ingredientPositions)
         {
@@ -53,9 +53,12 @@ public class Equipment : MonoBehaviour
                 currentHeldIngredient.transform.SetParent(areaPosition.position.transform);
                 currentHeldIngredient = null;
                 Picker.Instance.SetCurrentHeldItem(null); //Refactor
-                return;
+                Debug.Log("Placed!");
+                return true;
             }
         }
+
+        return false;
     }
 }
 

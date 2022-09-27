@@ -124,3 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e46117bb8f13f9942b38bfa0b94af909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cookingStageSprites:
+  - {fileID: 21300000, guid: a0ae31cd8f2729b48acbe1c163c59fa0, type: 3}
+  - {fileID: 21300000, guid: e0ff2bb55f89389438d55ca85ac3967d, type: 3}
+  - {fileID: 21300000, guid: 6689aa91f02599c458fcc4d5c4503f37, type: 3}
+  timebeforeNextCookedStage: 5

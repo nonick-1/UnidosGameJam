@@ -1,22 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+public enum Doneness { Raw = 0, Cooked = 1, Burnt = 2}
 
 public class Ingredient : MonoBehaviour
 {
+    Doneness currentDoneness = Doneness.Raw;
+
+    bool isCooking;
     public bool IsOverValidEquipment { get; set; }
     public Equipment EquipmentHovered { get; set; }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float timeElapsed = 0;
 
-    // Update is called once per frame
-    void Update()
+    SpriteRenderer currentSpriteRend;
+    [SerializeField] Sprite[] cookingStageSprites;
+
+    //Could randomize to make it a little tricky
+    [SerializeField] float timebeforeNextCookedStage = 5f;
+
+    //Since we have the stages for each food I'm hard coding stage 2. Refactor
+    int currentFoodStage;
+    const int stageFoodIsDone = 2;
+
+    private void Start()
     {
-        
+        currentSpriteRend = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,8 +51,23 @@ public class Ingredient : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(isCooking && (int)currentDoneness < cookingStageSprites.Length -1)
+        {
+            timeElapsed += Time.deltaTime;
+  
+            if (timeElapsed > timebeforeNextCookedStage)
+            {
+                currentDoneness++;
+                currentSpriteRend.sprite = cookingStageSprites[(int)currentDoneness];
+                timeElapsed = 0;
+            }
+        }
+    }
+
     public void PlaceIngredientOnEquipment()
     {
-        EquipmentHovered.IsAbleToPlaceItem(this);
+        isCooking = EquipmentHovered.IsAbleToPlaceItem(this);
     }
 }
