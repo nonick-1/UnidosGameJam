@@ -2,13 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum HeldIngredients
-{
-    Tortillas,
-    Fajitas,
-    Salsa
-}
-
 public class Equipment : MonoBehaviour
 {
     [SerializeField] int currentOfFoodItemsHeld;
@@ -25,15 +18,15 @@ public class Equipment : MonoBehaviour
     public Vector2 hotSpot = Vector2.zero;
 
 
-    private void SetCursor()
-    {
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-    }
+    //private void SetCursor()
+    //{
+    //    Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+    //}
 
-    private void ResetCursor()
-    {
-        Cursor.SetCursor(defaultCursorTexture, hotSpot, cursorMode);
-    }
+    //private void ResetCursor()
+    //{
+    //    Cursor.SetCursor(defaultCursorTexture, hotSpot, cursorMode);
+    //}
 
     private GameObject GetFreeKitchenArea()
     {
@@ -49,40 +42,25 @@ public class Equipment : MonoBehaviour
         return null;
     }
 
-    void OnMouseDown()
+    public void IsAbleToPlaceItem(Ingredient currentHeldIngredient)
     {
-        Destroy(gameObject, 1f);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        //SetCursor();
-
-        GameObject availablePosition = GetFreeKitchenArea();
-
-        //No free positions
-        if (!availablePosition)
-            return;
-
-        if (ingredientsAllowed.Contains(other.GetComponent<Ingredient>()))
+        foreach(var areaPosition in ingredientPositions)
         {
-            //Allow Drop
-
-            //Set Item on Equipment
-            other.gameObject.transform.position = availablePosition.transform.position;
+            if(!areaPosition.isPositionTaken && !ingredientsAllowed.Contains(currentHeldIngredient))
+            {
+                areaPosition.isPositionTaken = true;
+                currentHeldIngredient.gameObject.transform.position = areaPosition.position.transform.position;
+                currentHeldIngredient.transform.SetParent(areaPosition.position.transform);
+                currentHeldIngredient = null;
+                Picker.Instance.SetCurrentHeldItem(null); //Refactor
+                return;
+            }
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        ResetCursor();
-
-
     }
 }
 
 [System.Serializable]
-class AreaPosition
+public class AreaPosition
 {
     public GameObject position;
     public bool isPositionTaken;

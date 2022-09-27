@@ -12,11 +12,12 @@ public class Picker : MonoBehaviour
     CursorMode cursorMode = CursorMode.Auto;
     Vector2 hotSpot = Vector2.zero;
 
-    public Ingredient CurrentHeldIngredient { get; set; }
     public GameObject Handler { get; set; }
 
     public static Picker Instance { get { return _instance; } }
     private static Picker _instance;
+
+    Ingredient currentHeldIngredient;
 
     private void Awake()
     {
@@ -40,5 +41,28 @@ public class Picker : MonoBehaviour
     {
         MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Handler.transform.position = new Vector3(MousePosition.x, MousePosition.y, 0);
+        PlaceIngredient();
+    }
+
+    public void SetCurrentHeldItem(Ingredient heldItem)
+    {
+        currentHeldIngredient = heldItem;
+    }
+
+    public Ingredient GetCurrentHeldItem()
+    {
+        return currentHeldIngredient;
+    }
+
+    private void PlaceIngredient()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Held: " + currentHeldIngredient);
+            if (currentHeldIngredient && currentHeldIngredient.IsOverValidEquipment)
+            {
+                currentHeldIngredient.PlaceIngredientOnEquipment();
+            }
+        }
     }
 }
