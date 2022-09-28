@@ -44,8 +44,10 @@ public class Equipment : MonoBehaviour
         return false;
     }
 
-    public void PlacePlate(Plates currentHeldPlate)
+    public void PlacePlate(Plate currentHeldPlate)
     {
+        if (currentHeldPlate == null) return;
+
         foreach (var areaPosition in itemPositions)
         {
             if (!areaPosition.isPositionTaken && ingredientAllowed == currentHeldPlate.GetCurrentType())
@@ -56,6 +58,7 @@ public class Equipment : MonoBehaviour
                 currentHeldPlate = null;
                 Picker.Instance.SetCurrentHeldPlate(null); //Refactor
                 Debug.Log("Placed!");
+                return;
             }
         }
 

@@ -18,7 +18,7 @@ public class Picker : MonoBehaviour
     private static Picker _instance;
 
     Ingredient currentHeldIngredient;
-    Plates currentHeldPlate;
+    Plate currentHeldPlate;
 
     private void Awake()
     {
@@ -50,7 +50,7 @@ public class Picker : MonoBehaviour
         currentHeldIngredient = heldItem;
     }
 
-    public void SetCurrentHeldPlate(Plates heldItem)
+    public void SetCurrentHeldPlate(Plate heldItem)
     {
         currentHeldPlate = heldItem;
     }
@@ -60,7 +60,7 @@ public class Picker : MonoBehaviour
         return currentHeldIngredient;
     }
 
-    public Plates GetCurrentHeldPlate()
+    public Plate GetCurrentHeldPlate()
     {
         return currentHeldPlate;
     }
