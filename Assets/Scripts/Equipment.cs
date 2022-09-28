@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Equipment : MonoBehaviour
 {
-    [SerializeField] List<IngredientTypes> ingredientAllowed;
-    [SerializeField] List<AreaPosition> itemPositions;
+    [SerializeField] protected List<IngredientTypes> ingredientAllowed;
+    [SerializeField] protected List<AreaPosition> itemPositions;
 
     [SerializeField] Sprite mouseOverCookingIcon;
 
@@ -25,7 +25,7 @@ public class Equipment : MonoBehaviour
     //    Cursor.SetCursor(defaultCursorTexture, hotSpot, cursorMode);
     //}    
 
-    public void IsAbleToPlaceItem(Item currentHeldIngredient)
+    public virtual void IsAbleToPlaceItem(Item currentHeldIngredient)
     {
         foreach(var areaPosition in itemPositions)
         {
@@ -44,27 +44,6 @@ public class Equipment : MonoBehaviour
         }
 
         return;
-    }
-
-    public void PlacePlate(Plate currentHeldPlate)
-    {
-        if (currentHeldPlate == null) return;
-
-        foreach (var areaPosition in itemPositions)
-        {
-            if (!areaPosition.isPositionTaken && ingredientAllowed.Contains(currentHeldPlate.GetCurrentType()))
-            {
-                areaPosition.isPositionTaken = true;
-                currentHeldPlate.gameObject.transform.position = areaPosition.position.transform.position;
-                currentHeldPlate.transform.SetParent(areaPosition.position.transform);
-                currentHeldPlate = null;
-                //Picker.Instance.SetCurrentHeldPlate(null); //Refactor
-                Debug.Log("Placed!");
-                return;
-            }
-        }
-
-        Debug.Log("Not Placed!");
     }
 
     public List<IngredientTypes> GetIngredientsAllowed()

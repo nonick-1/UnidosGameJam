@@ -440,7 +440,7 @@ Transform:
   - {fileID: 795112213}
   - {fileID: 1137003390}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &259701963
 GameObject:
@@ -556,7 +556,7 @@ Transform:
   m_Children:
   - {fileID: 1987172698}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &466529621
 GameObject:
@@ -822,7 +822,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &600587816
 GameObject:
@@ -1279,7 +1279,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &736169234
 GameObject:
@@ -1675,7 +1675,7 @@ GameObject:
   - component: {fileID: 842207766}
   - component: {fileID: 842207765}
   - component: {fileID: 842207767}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plates - Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1787,7 +1787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a804ec857eff1c54eaf5c71f08868324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plate: {fileID: 4128764220385699394, guid: 2b1657a307977be498bd6605ad00c17f, type: 3}
+  clickedIngredient: {fileID: 0}
+  clickedPlate: {fileID: 4128764220385699394, guid: 2b1657a307977be498bd6605ad00c17f, type: 3}
 --- !u!1 &846149170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,63 +2431,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1055622227
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -31.177622
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.0870843
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.35128868
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827888, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024163181070827891, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
-      propertyPath: m_Name
-      value: Tortilla Cooking Ingredient
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
 --- !u!1 &1115786213
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,7 +2978,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1220472524
 MonoBehaviour:
@@ -3341,7 +3285,7 @@ Transform:
   - {fileID: 736169235}
   - {fileID: 108332449}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1471187339
 GameObject:
@@ -3409,7 +3353,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1475503175
 GameObject:
@@ -3508,6 +3452,7 @@ GameObject:
   - component: {fileID: 1479080690}
   - component: {fileID: 1479080689}
   - component: {fileID: 1479080688}
+  - component: {fileID: 1479080692}
   m_Layer: 6
   m_Name: Equipment - Plancha Plate Section
   m_TagString: Untagged
@@ -3675,6 +3620,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1479080692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479080686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49c2fc6c6b0ec194a937c3a8c60ffe53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientAllowed: 08000000
+  itemPositions:
+  - position: {fileID: 611963645}
+    isPositionTaken: 0
+  - position: {fileID: 1044821315}
+    isPositionTaken: 0
+  - position: {fileID: 1884739087}
+    isPositionTaken: 0
+  - position: {fileID: 1399191821}
+    isPositionTaken: 0
+  - position: {fileID: 1481137587}
+    isPositionTaken: 0
+  - position: {fileID: 1115786213}
+    isPositionTaken: 0
+  - position: {fileID: 1895464267}
+    isPositionTaken: 0
+  - position: {fileID: 1953491246}
+    isPositionTaken: 0
+  - position: {fileID: 1157350683}
+    isPositionTaken: 0
+  mouseOverCookingIcon: {fileID: 0}
+  cursorMode: 0
+  cursorTexture: {fileID: 0}
+  defaultCursorTexture: {fileID: 0}
+  hotSpot: {x: 0, y: 0}
 --- !u!1 &1481137587
 GameObject:
   m_ObjectHideFlags: 0

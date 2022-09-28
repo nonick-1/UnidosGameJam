@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2830317911930086474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0, z: 0}
+  m_LocalPosition: {x: 23.7911, y: -4.899599, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124,7 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8497d3e7ceaa1d44bb2c799ece61887d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentType: 2
+  currentType: 8
+  clickedIngredient: {fileID: 0}
+  cookingStageSprites: []
+  timebeforeNextCookedStage: 0
   allTacoCombinations:
   - recipeCombinations: 0000000001000000
     desiredPlateLook: {fileID: 21300000, guid: 6a50b02129ceef74bbf4dbc2319fbe7c, type: 3}

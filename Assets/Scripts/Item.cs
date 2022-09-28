@@ -57,12 +57,14 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void Pickup()
+    public void Pickup(bool isIngredient)
     {
         isCooking = false;
         this.transform.SetParent(Picker.Instance.Handler.transform);
         Picker.Instance.SetCurrentHeldItem(this);
         this.transform.localPosition = Vector3.zero;
-        currentSlotTaken.isPositionTaken = false;
+
+        if(isIngredient)
+            currentSlotTaken.isPositionTaken = false;
     }
 }

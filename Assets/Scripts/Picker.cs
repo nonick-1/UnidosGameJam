@@ -100,17 +100,28 @@ public class Picker : MonoBehaviour
         else
             Debug.Log("Item: " + results[0].collider.gameObject.name);
 
+
+        //TODO: Implement Interface ISpawn
         Item cachedItem = results[0].collider.GetComponent<Item>();
         Spawner cachedSpawner = results[0].collider.GetComponent<Spawner>();
+        PlateSpawner cachedPlateSpawner = results[0].collider.GetComponent<PlateSpawner>();
 
-        if (cachedSpawner)
+        if (cachedPlateSpawner)
         {
             Debug.Log("Target: " + results[0].collider.gameObject.name);
-            cachedSpawner.SpawnIngredient();
+            cachedPlateSpawner.SpawnIngredient();
         }
         else if(cachedItem)
         {
-            cachedItem.Pickup();
+            if(cachedItem.GetCurrentIngredientType() == IngredientTypes.Plates)
+                cachedItem.Pickup(false);
+            else
+                cachedItem.Pickup(true);
+        }
+        else if(cachedSpawner)
+        {
+            Debug.Log("Target: " + results[0].collider.gameObject.name);
+            cachedSpawner.SpawnIngredient();
         }
     }
 
