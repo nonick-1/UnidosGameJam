@@ -15,15 +15,16 @@ public class Item : MonoBehaviour
     //Could randomize to make it a little tricky
     [SerializeField] float timebeforeNextCookedStage = 5f;
 
+    //Used to vacant open position when pickedup
     AreaPosition currentSlotTaken;
 
+    //Use to shift cooking sprites and doneness
+    bool isCooking;
+    float timeElapsed = 0;
     Doneness currentDoneness = Doneness.Raw;
 
-    bool isCooking;
-
-    float timeElapsed = 0;
-
-    SpriteRenderer currentSpriteRend;
+    //Will be used for Final Cooking Product and Ingredient Cooked
+    protected SpriteRenderer currentSpriteRend;
 
 
     public void SetCurrentSlotTaken(AreaPosition slot) => currentSlotTaken = slot;

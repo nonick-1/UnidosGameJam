@@ -167,8 +167,15 @@ public class Picker : MonoBehaviour
         return currentHeldItem;
     }
 
-    public void SetCurrentHeldItem(Item item)
+    public void SetCurrentHeldItem(Item item, bool removedChild = false)
     {
         currentHeldItem = item;
+
+        //Used to remove the combined cooking item
+        if (removedChild)
+        {
+            GameObject foodIngredientOnPlate = Handler.gameObject.transform.GetChild(0).gameObject;
+            Destroy(foodIngredientOnPlate);
+        }
     }
 }
