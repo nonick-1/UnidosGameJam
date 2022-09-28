@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum Doneness { Raw = 0, Cooked = 1, Burnt = 2}
-public enum IngredientTypes { Tortilla, Meat}
+public enum IngredientTypes { Tortilla, Meat, Plates}
 
 public class Ingredient : MonoBehaviour
 {
-    [SerializeField] IngredientTypes currentIngredientType;
+    [SerializeField] IngredientTypes currentType;
     Doneness currentDoneness = Doneness.Raw;
 
     bool isCooking;
@@ -34,13 +34,13 @@ public class Ingredient : MonoBehaviour
 
     public IngredientTypes GetCurrentIngredientType()
     {
-        return currentIngredientType;
+        return currentType;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         EquipmentHovered = collision.GetComponent<Equipment>();
-        if (EquipmentHovered && EquipmentHovered.GetIngredientsAllowed() == currentIngredientType)
+        if (EquipmentHovered && EquipmentHovered.GetIngredientsAllowed() == currentType)
         {
             Debug.Log("Is over valid equipment!");
             IsOverValidEquipment = true;
@@ -69,6 +69,6 @@ public class Ingredient : MonoBehaviour
 
     public void PlaceIngredientOnEquipment()
     {
-        isCooking = EquipmentHovered.IsAbleToPlaceItem(this);
+        isCooking = EquipmentHovered.IsAbleToPlaceIngredient(this);
     }
 }

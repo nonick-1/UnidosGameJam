@@ -5,7 +5,7 @@ using UnityEngine;
 public class Equipment : MonoBehaviour
 {
     [SerializeField] IngredientTypes ingredientAllowed;
-    [SerializeField] List<AreaPosition> ingredientPositions;
+    [SerializeField] List<AreaPosition> itemPositions;
 
     [SerializeField] Sprite mouseOverCookingIcon;
 
@@ -25,9 +25,9 @@ public class Equipment : MonoBehaviour
     //    Cursor.SetCursor(defaultCursorTexture, hotSpot, cursorMode);
     //}
 
-    public bool IsAbleToPlaceItem(Ingredient currentHeldIngredient)
+    public bool IsAbleToPlaceIngredient(Ingredient currentHeldIngredient)
     {
-        foreach(var areaPosition in ingredientPositions)
+        foreach(var areaPosition in itemPositions)
         {
             if(!areaPosition.isPositionTaken && ingredientAllowed == currentHeldIngredient.GetCurrentIngredientType())
             {
@@ -35,13 +35,31 @@ public class Equipment : MonoBehaviour
                 currentHeldIngredient.gameObject.transform.position = areaPosition.position.transform.position;
                 currentHeldIngredient.transform.SetParent(areaPosition.position.transform);
                 currentHeldIngredient = null;
-                Picker.Instance.SetCurrentHeldItem(null); //Refactor
+                Picker.Instance.SetCurrentHeldIngredient(null); //Refactor
                 Debug.Log("Placed!");
                 return true;
             }
         }
 
         return false;
+    }
+
+    public void PlacePlate(Plates currentHeldPlate)
+    {
+        foreach (var areaPosition in itemPositions)
+        {
+            if (!areaPosition.isPositionTaken && ingredientAllowed == currentHeldPlate.GetCurrentType())
+            {
+                areaPosition.isPositionTaken = true;
+                currentHeldPlate.gameObject.transform.position = areaPosition.position.transform.position;
+                currentHeldPlate.transform.SetParent(areaPosition.position.transform);
+                currentHeldPlate = null;
+                Picker.Instance.SetCurrentHeldPlate(null); //Refactor
+                Debug.Log("Placed!");
+            }
+        }
+
+        Debug.Log("Not Placed!");
     }
 
     public IngredientTypes GetIngredientsAllowed()

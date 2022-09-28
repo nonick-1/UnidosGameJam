@@ -18,6 +18,7 @@ public class Picker : MonoBehaviour
     private static Picker _instance;
 
     Ingredient currentHeldIngredient;
+    Plates currentHeldPlate;
 
     private void Awake()
     {
@@ -44,14 +45,24 @@ public class Picker : MonoBehaviour
         PlaceIngredient();
     }
 
-    public void SetCurrentHeldItem(Ingredient heldItem)
+    public void SetCurrentHeldIngredient(Ingredient heldItem)
     {
         currentHeldIngredient = heldItem;
     }
 
-    public Ingredient GetCurrentHeldItem()
+    public void SetCurrentHeldPlate(Plates heldItem)
+    {
+        currentHeldPlate = heldItem;
+    }
+
+    public Ingredient GetCurrentHeldIngredient()
     {
         return currentHeldIngredient;
+    }
+
+    public Plates GetCurrentHeldPlate()
+    {
+        return currentHeldPlate;
     }
 
     private void PlaceIngredient()
@@ -62,6 +73,11 @@ public class Picker : MonoBehaviour
             if (currentHeldIngredient && currentHeldIngredient.IsOverValidEquipment)
             {
                 currentHeldIngredient.PlaceIngredientOnEquipment();
+            }
+
+            if (currentHeldPlate && currentHeldPlate.IsOverValidEquipment)
+            {
+                currentHeldPlate.PlacePlateOnEquipment();
             }
         }
     }

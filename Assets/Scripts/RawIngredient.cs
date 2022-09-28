@@ -8,10 +8,10 @@ public class RawIngredient : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(Picker.Instance.GetCurrentHeldItem() == null)
+        if(Picker.Instance.GetCurrentHeldIngredient() == null)
         {
             Ingredient cachedIngredient = Instantiate(clickedIngredient, Vector3.zero, Quaternion.identity, Picker.Instance.Handler.transform);
-            Picker.Instance.SetCurrentHeldItem(cachedIngredient);
+            Picker.Instance.SetCurrentHeldIngredient(cachedIngredient);
             cachedIngredient.transform.localPosition = Vector3.zero;
         }
     }

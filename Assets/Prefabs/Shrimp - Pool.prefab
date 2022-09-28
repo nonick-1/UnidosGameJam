@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d9e3926e18602429fa11f42025eb95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentIngredientType: 1
+  currentType: 1
   cookingStageSprites:
   - {fileID: 21300000, guid: 2106fa4a3a96f894a9ea3e709ac5e5fb, type: 3}
   - {fileID: 21300000, guid: 1e37e47379c7f63428f65437c70cbe59, type: 3}
