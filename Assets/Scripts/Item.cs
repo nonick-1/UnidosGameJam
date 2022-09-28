@@ -9,25 +9,22 @@ public enum IngredientTypes { Tortilla, AlPastor, Onions, Cilantro, Shrimp, Carn
 public class Item : MonoBehaviour
 {
     [SerializeField] IngredientTypes currentType;
-
-    //Ingredient to Spawn when clicked
     [SerializeField] Item clickedIngredient;
+    [SerializeField] Sprite[] cookingStageSprites;
+
+    //Could randomize to make it a little tricky
+    [SerializeField] float timebeforeNextCookedStage = 5f;
 
     AreaPosition currentSlotTaken;
 
     Doneness currentDoneness = Doneness.Raw;
 
     bool isCooking;
-    public bool IsOverValidEquipment { get; set; }
-    public Equipment EquipmentHovered { get; set; }
 
     float timeElapsed = 0;
 
     SpriteRenderer currentSpriteRend;
-    [SerializeField] Sprite[] cookingStageSprites;
 
-    //Could randomize to make it a little tricky
-    [SerializeField] float timebeforeNextCookedStage = 5f;
 
     public void SetCurrentSlotTaken(AreaPosition slot) => currentSlotTaken = slot;
     public void SetIsCooking(bool isCookingCached) => isCooking = isCookingCached;
@@ -66,5 +63,16 @@ public class Item : MonoBehaviour
 
         if(isIngredient)
             currentSlotTaken.isPositionTaken = false;
+    }
+
+    public void ResetTransform()
+    {
+        gameObject.transform.localPosition = Vector3.zero;
+        gameObject.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    public Doneness GetCurrentDoneness()
+    {
+        return currentDoneness;
     }
 }

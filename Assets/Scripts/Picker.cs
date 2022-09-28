@@ -22,6 +22,7 @@ public class Picker : MonoBehaviour
 
     [SerializeField] LayerMask equipmentLayers;
     [SerializeField] LayerMask ingredientsLayer;
+    [SerializeField] LayerMask servingPlateLayer;
 
     private void Awake()
     {
@@ -56,11 +57,33 @@ public class Picker : MonoBehaviour
     {
         if (currentHeldItem == null)
             GrabItem();
-        else
-            PlaceItem();
+        else if(currentHeldItem.GetCurrentDoneness() == Doneness.Cooked)
+            PlaceItemOnPlate();
+        else 
+            PlaceItemOnEquipment();
     }
 
-    private void PlaceItem()
+    private void PlaceItemOnPlate()
+    {
+        ContactFilter2D filter2D = new ContactFilter2D
+        {
+            layerMask = servingPlateLayer,
+        };
+
+        filter2D.useLayerMask = true;
+
+        RaycastHit2D[] results = new RaycastHit2D[1];
+        int objectsHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, filter2D, results, Mathf.Infinity);
+
+        Plate cachedPlate = results[0].collider.GetComponent<Plate>();
+        if (objectsHit > 0 && cachedPlate)
+        {
+            Debug.Log("Target: " + results[0].collider.gameObject.name);
+            cachedPlate.ItemPlace(currentHeldItem);
+        }
+    }
+
+    private void PlaceItemOnEquipment()
     {
         ContactFilter2D filter2D = new ContactFilter2D
         {
