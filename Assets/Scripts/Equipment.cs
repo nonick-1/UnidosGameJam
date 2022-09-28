@@ -23,25 +23,27 @@ public class Equipment : MonoBehaviour
     //private void ResetCursor()
     //{
     //    Cursor.SetCursor(defaultCursorTexture, hotSpot, cursorMode);
-    //}
+    //}    
 
-    public bool IsAbleToPlaceIngredient(Ingredient currentHeldIngredient)
+    public void IsAbleToPlaceItem(Item currentHeldIngredient)
     {
         foreach(var areaPosition in itemPositions)
         {
             if(!areaPosition.isPositionTaken && ingredientAllowed == currentHeldIngredient.GetCurrentIngredientType())
             {
                 areaPosition.isPositionTaken = true;
+                currentHeldIngredient.SetIsCooking(true);
                 currentHeldIngredient.gameObject.transform.position = areaPosition.position.transform.position;
                 currentHeldIngredient.transform.SetParent(areaPosition.position.transform);
+                currentHeldIngredient.SetCurrentSlotTaken(areaPosition);
                 currentHeldIngredient = null;
-                Picker.Instance.SetCurrentHeldIngredient(null); //Refactor
+                Picker.Instance.SetCurrentHeldItem(null); //Refactor
                 Debug.Log("Placed!");
-                return true;
+                return;
             }
         }
 
-        return false;
+        return;
     }
 
     public void PlacePlate(Plate currentHeldPlate)
@@ -56,7 +58,7 @@ public class Equipment : MonoBehaviour
                 currentHeldPlate.gameObject.transform.position = areaPosition.position.transform.position;
                 currentHeldPlate.transform.SetParent(areaPosition.position.transform);
                 currentHeldPlate = null;
-                Picker.Instance.SetCurrentHeldPlate(null); //Refactor
+                //Picker.Instance.SetCurrentHeldPlate(null); //Refactor
                 Debug.Log("Placed!");
                 return;
             }

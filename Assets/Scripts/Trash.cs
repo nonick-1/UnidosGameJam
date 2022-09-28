@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tortilla : Item
+public class Trash : MonoBehaviour
 {
 
 }

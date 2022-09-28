@@ -10,6 +10,13 @@ public class Plate : MonoBehaviour
 
     [SerializeField] List<TacoCombinations> allTacoCombinations;
 
+    SpriteRenderer plateSpriteRenderer;
+
+    private void Start()
+    {
+        plateSpriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     public IngredientTypes GetCurrentType()
     {
         return currentType;
@@ -23,8 +30,6 @@ public class Plate : MonoBehaviour
             Debug.Log("Is over valid equipment!");
             IsOverValidEquipment = true;
         }
-
-
     }
 
     //TODO: Refactor into interface with Ingredient.cs. Picker Places the object down but checks this object itself whether it can

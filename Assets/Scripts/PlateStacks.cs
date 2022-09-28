@@ -8,11 +8,11 @@ public class PlateStacks : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Picker.Instance.GetCurrentHeldPlate() == null)
-        {
-            Plate cachedPlate = Instantiate(plate, Vector3.zero, Quaternion.identity, Picker.Instance.Handler.transform);
-            Picker.Instance.SetCurrentHeldPlate(cachedPlate);
-            cachedPlate.transform.localPosition = Vector3.zero;
-        }
+        //if (Picker.Instance.GetCurrentHeldPlate() == null)
+        //{
+        //    Plate cachedPlate = Instantiate(plate, Vector3.zero, Quaternion.identity, Picker.Instance.Handler.transform);
+        //    Picker.Instance.SetCurrentHeldPlate(cachedPlate);
+        //    cachedPlate.transform.localPosition = Vector3.zero;
+        //}
     }
 }

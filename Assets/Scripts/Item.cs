@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public enum Doneness { Raw = 0, Cooked = 1, Burnt = 2}
 public enum IngredientTypes { Tortilla, AlPastor, Onions, Cilantro, Shrimp, CarneAsada, SalsaRojo, SalsaVerde, Plates}
 
-public class Ingredient : MonoBehaviour
+public class Item : MonoBehaviour
 {
     [SerializeField] IngredientTypes currentType;
 
     //Ingredient to Spawn when clicked
-    [SerializeField] Ingredient clickedIngredient;
+    [SerializeField] Item clickedIngredient;
+
+    AreaPosition currentSlotTaken;
 
     Doneness currentDoneness = Doneness.Raw;
 
@@ -27,6 +29,9 @@ public class Ingredient : MonoBehaviour
     //Could randomize to make it a little tricky
     [SerializeField] float timebeforeNextCookedStage = 5f;
 
+    public void SetCurrentSlotTaken(AreaPosition slot) => currentSlotTaken = slot;
+    public void SetIsCooking(bool isCookingCached) => isCooking = isCookingCached;
+
     private void Start()
     {
         currentSpriteRend = GetComponent<SpriteRenderer>();
@@ -35,26 +40,6 @@ public class Ingredient : MonoBehaviour
     public IngredientTypes GetCurrentIngredientType()
     {
         return currentType;
-    }
-
-    public void Pickup()
-    {
-        if (Picker.Instance.GetCurrentHeldIngredient() == null)
-        {
-            Ingredient cachedIngredient = Instantiate(clickedIngredient, Vector3.zero, Quaternion.identity, Picker.Instance.Handler.transform);
-            Picker.Instance.SetCurrentHeldIngredient(cachedIngredient);
-            cachedIngredient.transform.localPosition = Vector3.zero;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        EquipmentHovered = collision.GetComponent<Equipment>();
-        if (EquipmentHovered && EquipmentHovered.GetIngredientsAllowed() == currentType)
-        {
-            Debug.Log("Is over valid equipment!");
-            IsOverValidEquipment = true;
-        }
     }
 
     private void Update()
@@ -72,8 +57,12 @@ public class Ingredient : MonoBehaviour
         }
     }
 
-    public void PlaceIngredientOnEquipment()
+    public void Pickup()
     {
-        isCooking = EquipmentHovered.IsAbleToPlaceIngredient(this);
+        isCooking = false;
+        this.transform.SetParent(Picker.Instance.Handler.transform);
+        Picker.Instance.SetCurrentHeldItem(this);
+        this.transform.localPosition = Vector3.zero;
+        currentSlotTaken.isPositionTaken = false;
     }
 }
