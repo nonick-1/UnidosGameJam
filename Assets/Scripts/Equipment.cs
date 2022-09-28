@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Equipment : MonoBehaviour
 {
-    [SerializeField] IngredientTypes ingredientAllowed;
+    [SerializeField] List<IngredientTypes> ingredientAllowed;
     [SerializeField] List<AreaPosition> itemPositions;
 
     [SerializeField] Sprite mouseOverCookingIcon;
@@ -29,7 +29,7 @@ public class Equipment : MonoBehaviour
     {
         foreach(var areaPosition in itemPositions)
         {
-            if(!areaPosition.isPositionTaken && ingredientAllowed == currentHeldIngredient.GetCurrentIngredientType())
+            if(!areaPosition.isPositionTaken && ingredientAllowed.Contains(currentHeldIngredient.GetCurrentIngredientType()))
             {
                 areaPosition.isPositionTaken = true;
                 currentHeldIngredient.SetIsCooking(true);
@@ -52,7 +52,7 @@ public class Equipment : MonoBehaviour
 
         foreach (var areaPosition in itemPositions)
         {
-            if (!areaPosition.isPositionTaken && ingredientAllowed == currentHeldPlate.GetCurrentType())
+            if (!areaPosition.isPositionTaken && ingredientAllowed.Contains(currentHeldPlate.GetCurrentType()))
             {
                 areaPosition.isPositionTaken = true;
                 currentHeldPlate.gameObject.transform.position = areaPosition.position.transform.position;
@@ -67,7 +67,7 @@ public class Equipment : MonoBehaviour
         Debug.Log("Not Placed!");
     }
 
-    public IngredientTypes GetIngredientsAllowed()
+    public List<IngredientTypes> GetIngredientsAllowed()
     {
         return ingredientAllowed;
     }

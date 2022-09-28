@@ -25,7 +25,7 @@ public class Plate : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         EquipmentHovered = collision.GetComponent<Equipment>();
-        if (EquipmentHovered && EquipmentHovered.GetIngredientsAllowed() == currentType)
+        if (EquipmentHovered && EquipmentHovered.GetIngredientsAllowed().Contains(currentType))
         {
             Debug.Log("Is over valid equipment!");
             IsOverValidEquipment = true;
