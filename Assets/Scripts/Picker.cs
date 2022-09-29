@@ -63,33 +63,16 @@ public class Picker : MonoBehaviour
 
     private void GrabItem()
     {
-        ContactFilter2D filter2D = new ContactFilter2D
-        {
-            layerMask = ingredientsLayer,
-        };
-
-        filter2D.useLayerMask = true;
-
-        RaycastHit2D[] results = new RaycastHit2D[1];
-        int objectsHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, filter2D, results, Mathf.Infinity);
-
-        if (objectsHit <= 0)
-        {
-            Debug.Log("No object detected!");
-            return;
-        }
-        else
-            Debug.Log("Item: " + results[0].collider.gameObject.name);
-
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
         //TODO: Implement Interface ISpawn
-        Item cachedItem = results[0].collider.GetComponent<Item>();
-        Spawner cachedSpawner = results[0].collider.GetComponent<Spawner>();
-        PlateSpawner cachedPlateSpawner = results[0].collider.GetComponent<PlateSpawner>();
+        Item cachedItem = hit.collider.GetComponent<Item>();
+        Spawner cachedSpawner = hit.collider.GetComponent<Spawner>();
+        PlateSpawner cachedPlateSpawner = hit.collider.GetComponent<PlateSpawner>();
 
         if (cachedPlateSpawner)
         {
-            Debug.Log("Target: " + results[0].collider.gameObject.name);
+            Debug.Log("Target: " + hit.collider.gameObject.name);
             cachedPlateSpawner.SpawnIngredient();
         }
         else if(cachedItem)
@@ -101,7 +84,7 @@ public class Picker : MonoBehaviour
         }
         else if(cachedSpawner)
         {
-            Debug.Log("Target: " + results[0].collider.gameObject.name);
+            Debug.Log("Target: " + hit.collider.gameObject.name);
             cachedSpawner.SpawnIngredient();
         }
     }
