@@ -9,18 +9,6 @@ public class Plate : Item, IInteraction
     [SerializeField] List<TacoCombinations> allTacoCombinations;
     List<IngredientTypes> currentIngredientsOnPlate = new List<IngredientTypes>();
 
-    //public void ItemPlace(Item ingredientToAdd)
-    //{
-    //    //Can't combine plates
-    //    if (ingredientToAdd.GetCurrentIngredientType() == IngredientTypes.Plates || currentIngredientsOnPlate.Contains(ingredientToAdd.GetCurrentIngredientType())) 
-    //        return;
-
-    //    if (ingredientToAdd.GetCurrentDoneness() != Doneness.Cooked)
-    //        return;
-
-    //    VerifyTacoRecipeExists(ingredientToAdd);
-    //}
-
     private void VerifyTacoRecipeExists(Item ingredientToAdd)
     {
         List<IngredientTypes> possibleTacoCombination = currentIngredientsOnPlate.Select(ingredient => new IngredientTypes()).ToList();

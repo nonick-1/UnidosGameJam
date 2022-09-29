@@ -63,7 +63,7 @@ public class Picker : MonoBehaviour
 
     private void GrabItem()
     {
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, ~LayerMask.NameToLayer("Equipment"));
 
         //TODO: Implement Interface ISpawn
         Item cachedItem = hit.collider.GetComponent<Item>();
