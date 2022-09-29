@@ -68,19 +68,20 @@ public class Character : MonoBehaviour, IInteraction
         foodOrder.sprite = currentOrder.finalTacoWanted;
     }
 
-    public void HoverInteraction(Item item)
+    public void HoverInteraction(Equipment equipmentHovered)
     {
-        //Only want plates to active condition
-        if(item.GetCurrentIngredientType() == IngredientTypes.Plates)
-        {
+        throw new System.NotImplementedException();
+    }
 
-        }
+    public void PickupInteraction()
+    {
+        throw new System.NotImplementedException();
     }
 }
 
 [System.Serializable]
 public class TacoOrders
 {
-    public List<IngredientTypes> ingredientsNeeded;
+    public List<ItemType> ingredientsNeeded;
     public Sprite finalTacoWanted;
 }

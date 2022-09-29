@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5580165172621000751}
   - component: {fileID: 5580165172621000750}
   - component: {fileID: 5580165172621000737}
-  - component: {fileID: 2875623940583020713}
+  - component: {fileID: 1822007597782199346}
   m_Layer: 3
   m_Name: Al Pastor - Pool
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &2875623940583020713
+--- !u!114 &1822007597782199346
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,13 +121,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5580165172621000748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a1f6687e48fe524cbab27a76d2d4ff8, type: 3}
+  m_Script: {fileID: 11500000, guid: d6997aa64007af346bdc8f820f56c410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 1
-  clickedIngredient: {fileID: 0}
+  timebeforeNextCookedStage: 5
   cookingStageSprites:
   - {fileID: 21300000, guid: 3c0d2b54e6ce10d40b29f382ae0debbc, type: 3}
   - {fileID: 21300000, guid: 8b4986d63983e2a45b14f98386d5cf87, type: 3}
   - {fileID: 21300000, guid: 1a0ee2e0a92e75145b2a70cb7566db18, type: 3}
-  timebeforeNextCookedStage: 5

@@ -46,48 +46,53 @@ public class Picker : MonoBehaviour
     {
         MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Handler.transform.position = new Vector3(MousePosition.x, MousePosition.y, 0);
-        //PlaceIngredient();
 
         if(Input.GetMouseButtonDown(0))
-            MoveItem();
+            Interact();
         
     }
 
-    void MoveItem()
-    {
-        if (currentHeldItem == null)
-            GrabItem();
-
-        return;    
-    }
-
-    private void GrabItem()
+    private void Interact()
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, ~LayerMask.NameToLayer("Equipment"));
 
-        //TODO: Implement Interface ISpawn
         Item cachedItem = hit.collider.GetComponent<Item>();
         Spawner cachedSpawner = hit.collider.GetComponent<Spawner>();
-        PlateSpawner cachedPlateSpawner = hit.collider.GetComponent<PlateSpawner>();
 
-        if (cachedPlateSpawner)
-        {
-            Debug.Log("Target: " + hit.collider.gameObject.name);
-            cachedPlateSpawner.SpawnIngredient();
-        }
-        else if(cachedItem)
-        {
-            if(cachedItem.GetCurrentIngredientType() == IngredientTypes.Plates)
-                cachedItem.Pickup(false);
-            else
-                cachedItem.Pickup(true);
-        }
+        if (cachedItem)
+            cachedItem.PickupInteraction();
         else if(cachedSpawner)
-        {
-            Debug.Log("Target: " + hit.collider.gameObject.name);
-            cachedSpawner.SpawnIngredient();
-        }
+            cachedSpawner.CreateItem();
     }
+
+    //private void GrabItem()
+    //{
+    //    RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, ~LayerMask.NameToLayer("Equipment"));
+
+    //    //TODO: Implement Interface ISpawn
+    //    Item cachedItem = hit.collider.GetComponent<Item>();
+    //    Spawner cachedSpawner = hit.collider.GetComponent<Spawner>();
+    //    PlateSpawner cachedPlateSpawner = hit.collider.GetComponent<PlateSpawner>();
+
+    //    if (cachedPlateSpawner)
+    //    {
+    //        cachedPlateSpawner.SpawnIngredient();
+    //    }
+    //    else if(cachedItem)
+    //    {
+    //        if(cachedItem.GetCurrentItemType() == ItemType.Plates)
+    //        {
+    //            cachedItem.Pickup(false);
+    //        }
+    //        else
+    //            cachedItem.Pickup(true);
+    //    }
+    //    else if(cachedSpawner)
+    //    {
+    //        Debug.Log("Target: " + hit.collider.gameObject.name);
+    //        cachedSpawner.SpawnIngredient();
+    //    }
+    //}
 
     public Item GetCurrentHeldItem()
     {
@@ -96,6 +101,7 @@ public class Picker : MonoBehaviour
 
     public void SetCurrentHeldItem(Item item, bool removedChild = false)
     {
+        Debug.Log("Item Set!");
         currentHeldItem = item;
 
         //Used to remove the combined cooking item

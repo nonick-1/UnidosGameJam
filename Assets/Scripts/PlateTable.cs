@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlateTable : Equipment
 {
-    public override void IsAbleToPlaceItem(Item currentHeldIngredient)
+    public override bool IsAbleToPlaceItem(Item currentHeldIngredient)
     {
         foreach (var areaPosition in itemPositions)
         {
-            if (!areaPosition.isPositionTaken && ingredientAllowed.Contains(currentHeldIngredient.GetCurrentIngredientType()))
+            if (!areaPosition.isPositionTaken && ingredientAllowed.Contains(currentHeldIngredient.GetCurrentItemType()))
             {
                 areaPosition.isPositionTaken = true;
                 currentHeldIngredient.gameObject.transform.position = areaPosition.position.transform.position;
@@ -17,9 +17,9 @@ public class PlateTable : Equipment
                 currentHeldIngredient = null;
                 Picker.Instance.SetCurrentHeldItem(null); //Refactor
                 Debug.Log("Placed!");
-                return;
+                return true;
             }
         }
-        return;
+        return false;
     }
 }

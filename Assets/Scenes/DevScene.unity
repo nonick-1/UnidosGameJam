@@ -2762,11 +2762,6 @@ MonoBehaviour:
     isPositionTaken: 0
   - position: {fileID: 1157350683}
     isPositionTaken: 0
-  mouseOverCookingIcon: {fileID: 0}
-  cursorMode: 0
-  cursorTexture: {fileID: 0}
-  defaultCursorTexture: {fileID: 0}
-  hotSpot: {x: 0, y: 0}
 --- !u!212 &1479080691
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2828,34 +2823,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1479080686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c2fc6c6b0ec194a937c3a8c60ffe53, type: 3}
+  m_Script: {fileID: 11500000, guid: 376d78e7825fca24787880a0e5a948b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientAllowed: 08000000
-  itemPositions:
-  - position: {fileID: 611963645}
-    isPositionTaken: 0
-  - position: {fileID: 1044821315}
-    isPositionTaken: 0
-  - position: {fileID: 1884739087}
-    isPositionTaken: 0
-  - position: {fileID: 1399191821}
-    isPositionTaken: 0
-  - position: {fileID: 1481137587}
-    isPositionTaken: 0
-  - position: {fileID: 1115786213}
-    isPositionTaken: 0
-  - position: {fileID: 1895464267}
-    isPositionTaken: 0
-  - position: {fileID: 1953491246}
-    isPositionTaken: 0
-  - position: {fileID: 1157350683}
-    isPositionTaken: 0
-  mouseOverCookingIcon: {fileID: 0}
-  cursorMode: 0
-  cursorTexture: {fileID: 0}
-  defaultCursorTexture: {fileID: 0}
-  hotSpot: {x: 0, y: 0}
+  itemPositions: []
 --- !u!1 &1481137587
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,11 +3205,6 @@ MonoBehaviour:
     isPositionTaken: 0
   - position: {fileID: 1937345867}
     isPositionTaken: 0
-  mouseOverCookingIcon: {fileID: 0}
-  cursorMode: 0
-  cursorTexture: {fileID: 0}
-  defaultCursorTexture: {fileID: 0}
-  hotSpot: {x: 0, y: 0}
 --- !u!212 &1585965568
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4261,11 +4228,6 @@ MonoBehaviour:
     isPositionTaken: 0
   - position: {fileID: 259701963}
     isPositionTaken: 0
-  mouseOverCookingIcon: {fileID: 0}
-  cursorMode: 0
-  cursorTexture: {fileID: 0}
-  defaultCursorTexture: {fileID: 0}
-  hotSpot: {x: 0, y: 0}
 --- !u!61 &1978034741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4819,6 +4781,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1208730394}
     m_Modifications:
+    - target: {fileID: 3302536214197017256, guid: 48d7fde75963cb849be64bf4ec9b1b79, type: 3}
+      propertyPath: clickedIngredient
+      value: 
+      objectReference: {fileID: 4744638050601237858, guid: 17d4b52db17e2c249ae6263c0ff70b4c, type: 3}
     - target: {fileID: 3302536214197017260, guid: 48d7fde75963cb849be64bf4ec9b1b79, type: 3}
       propertyPath: m_Name
       value: Tortilla - Pool
@@ -5001,6 +4967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Al Pastor - Pool
       objectReference: {fileID: 0}
+    - target: {fileID: 8061774360201615658, guid: cdd4e5eee2cf4984abdb95807cb975d9, type: 3}
+      propertyPath: clickedIngredient
+      value: 
+      objectReference: {fileID: 1822007597782199346, guid: addfffd04e960254db7e482f6f6976ad, type: 3}
     - target: {fileID: 8061774360201615659, guid: cdd4e5eee2cf4984abdb95807cb975d9, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -5135,5 +5105,9 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8888465267290058358, guid: a56e309d65b27ea4cb877669299341af, type: 3}
+      propertyPath: clickedIngredient
+      value: 
+      objectReference: {fileID: 6255675904946749816, guid: c07c60839733510408b0c569f4f02e1b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a56e309d65b27ea4cb877669299341af, type: 3}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1024163181070827888}
   - component: {fileID: 1024163181070827895}
   - component: {fileID: 1024163181070827894}
-  - component: {fileID: 4724723912066361613}
+  - component: {fileID: 4744638050601237858}
   m_Layer: 3
   m_Name: Tortilla Cooking Ingredient
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &4724723912066361613
+--- !u!114 &4744638050601237858
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,13 +121,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1024163181070827891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a1f6687e48fe524cbab27a76d2d4ff8, type: 3}
+  m_Script: {fileID: 11500000, guid: d6997aa64007af346bdc8f820f56c410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
-  clickedIngredient: {fileID: 0}
+  timebeforeNextCookedStage: 5
   cookingStageSprites:
   - {fileID: 21300000, guid: a0ae31cd8f2729b48acbe1c163c59fa0, type: 3}
   - {fileID: 21300000, guid: e0ff2bb55f89389438d55ca85ac3967d, type: 3}
   - {fileID: 21300000, guid: 6689aa91f02599c458fcc4d5c4503f37, type: 3}
-  timebeforeNextCookedStage: 5

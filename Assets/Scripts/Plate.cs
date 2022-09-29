@@ -4,15 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Plate : Item, IInteraction
+public class Plate : Item
 {
     [SerializeField] List<TacoCombinations> allTacoCombinations;
-    List<IngredientTypes> currentIngredientsOnPlate = new List<IngredientTypes>();
+    List<ItemType> currentIngredientsOnPlate = new List<ItemType>();
 
     private void VerifyTacoRecipeExists(Item ingredientToAdd)
     {
-        List<IngredientTypes> possibleTacoCombination = currentIngredientsOnPlate.Select(ingredient => new IngredientTypes()).ToList();
-        possibleTacoCombination.Add(ingredientToAdd.GetCurrentIngredientType());
+        List<ItemType> possibleTacoCombination = currentIngredientsOnPlate.Select(ingredient => new ItemType()).ToList();
+        possibleTacoCombination.Add(ingredientToAdd.GetCurrentItemType());
 
         foreach(var combination in allTacoCombinations)
         {
@@ -29,7 +29,7 @@ public class Plate : Item, IInteraction
                 //Reusing Equal to verify contents
                 if(equal)
                 {
-                    currentIngredientsOnPlate.Add(ingredientToAdd.GetCurrentIngredientType());
+                    currentIngredientsOnPlate.Add(ingredientToAdd.GetCurrentItemType());
                     currentSpriteRend.sprite = combination.desiredPlateLook;
 
                     Debug.Log("Found Sprite!");
@@ -40,25 +40,27 @@ public class Plate : Item, IInteraction
         }
     }
 
-    public void HoverInteraction(Item item)
+    public override void HoverInteraction(Equipment equipmentHovered)
     {
-        Debug.Log("Over Plate!");
-
-        if (item.GetCurrentIngredientType() == IngredientTypes.Plates || currentIngredientsOnPlate.Contains(item.GetCurrentIngredientType()))
-            return;
-
-        VerifyTacoRecipeExists(item);
+        currentHoveredEquipment.IsAbleToPlaceItem(this);
     }
 
-    public List<IngredientTypes> GetCurrentIngredientsOnPlate()
+    public override void PickupInteraction()
     {
-        return currentIngredientsOnPlate;
+        Debug.Log("Plate Pickedup");
+
+        this.transform.SetParent(Picker.Instance.Handler.transform);
+        Picker.Instance.SetCurrentHeldItem(this);
+        this.transform.localPosition = Vector3.zero;
+
+        if (GetCurrentSlotTaken() != null)
+            GetCurrentSlotTaken().isPositionTaken = false;
     }
 }
 
 [System.Serializable]
 public class TacoCombinations
 {
-    public List<IngredientTypes> recipeCombinations;
+    public List<ItemType> recipeCombinations;
     public Sprite desiredPlateLook;
 }

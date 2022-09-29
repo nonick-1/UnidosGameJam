@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 188701062212572069}
   - component: {fileID: 188701062212572068}
   - component: {fileID: 188701062212572075}
-  - component: {fileID: 1582892569144304577}
+  - component: {fileID: 79399210025370926}
   m_Layer: 3
   m_Name: Shrimp - Pool
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1582892569144304577
+--- !u!114 &79399210025370926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,13 +121,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 188701062212572070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a1f6687e48fe524cbab27a76d2d4ff8, type: 3}
+  m_Script: {fileID: 11500000, guid: d6997aa64007af346bdc8f820f56c410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 4
-  clickedIngredient: {fileID: 0}
+  timebeforeNextCookedStage: 5
   cookingStageSprites:
   - {fileID: 21300000, guid: 2106fa4a3a96f894a9ea3e709ac5e5fb, type: 3}
   - {fileID: 21300000, guid: 1e37e47379c7f63428f65437c70cbe59, type: 3}
   - {fileID: 21300000, guid: 3ba06ecedd41e4044a967a3a576600f0, type: 3}
-  timebeforeNextCookedStage: 5

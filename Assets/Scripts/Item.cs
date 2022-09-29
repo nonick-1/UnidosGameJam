@@ -5,104 +5,84 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum Doneness { Raw = 0, Cooked = 1, Burnt = 2}
-public enum IngredientTypes { Tortilla, AlPastor, Onions, Cilantro, Shrimp, CarneAsada, SalsaRojo, SalsaVerde, Plates}
+public enum ItemType { Tortilla, AlPastor, Onions, Cilantro, Shrimp, CarneAsada, SalsaRojo, SalsaVerde, Plates}
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, IInteraction
 {
-    [SerializeField] IngredientTypes currentType;
-    [SerializeField] Item clickedIngredient;
-    [SerializeField] Sprite[] cookingStageSprites;
+    [SerializeField] ItemType currentType;
 
-    //Could randomize to make it a little tricky
-    [SerializeField] float timebeforeNextCookedStage = 5f;
+    //Use to shift cooking sprites and doneness
+    bool isInHoverArea;
+    bool canBePickedUp;
 
     //Used to vacant open position when pickedup
     AreaPosition currentSlotTaken;
 
-    //Use to shift cooking sprites and doneness
-    bool isCooking, isInHoverArea;
-    float timeElapsed = 0;
-    Doneness currentDoneness = Doneness.Raw;
-
     //Will be used for Final Cooking Product and Ingredient Cooked
     protected SpriteRenderer currentSpriteRend;
 
-    IInteraction currentObjectInteraction;
+    protected Equipment currentHoveredEquipment;
 
     public void SetCurrentSlotTaken(AreaPosition slot) => currentSlotTaken = slot;
-    public void SetIsCooking(bool isCookingCached) => isCooking = isCookingCached;
+    public void SetCanBePickedUp(bool cachedCanBePickedUp) => canBePickedUp = cachedCanBePickedUp;
 
     private void Start()
     {
         currentSpriteRend = GetComponent<SpriteRenderer>();
     }
+    public virtual void Update()
+    {
+        if (isInHoverArea && Input.GetMouseButtonDown(0) && this == Picker.Instance.GetCurrentHeldItem())
+        {
+            Debug.Log("In hover area! Current Held Item: " + Picker.Instance.GetCurrentHeldItem());
+            HoverInteraction(currentHoveredEquipment);
+        }
+    }
 
-    public IngredientTypes GetCurrentIngredientType()
+    public bool GetCanBePickedUp()
+    {
+        return canBePickedUp;
+    }
+
+    public ItemType GetCurrentItemType()
     {
         return currentType;
     }
 
-    private void Update()
+    protected AreaPosition GetCurrentSlotTaken() 
     {
-        if(isInHoverArea && Input.GetMouseButtonDown(0) && this == Picker.Instance.GetCurrentHeldItem())
-        {
-            Debug.Log("In hover area!");
-            currentObjectInteraction?.HoverInteraction(this);
-        }
-
-        if(isCooking && (int)currentDoneness < cookingStageSprites.Length -1)
-        {
-            timeElapsed += Time.deltaTime;
-  
-            if (timeElapsed > timebeforeNextCookedStage)
-            {
-                currentDoneness++;
-                currentSpriteRend.sprite = cookingStageSprites[(int)currentDoneness];
-                timeElapsed = 0;
-            }
-        }
-    }
+        return currentSlotTaken;
+    } 
 
     //Issue with Collisions being to close. Ex Leaving the Tortialla Plancha going into the Meat Side would trigger the Exit and not reset
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("In area! Name: " + collision.gameObject.name);
+        Debug.Log("In area start! Name: " + collision.gameObject.name);
         isInHoverArea = true;
-        currentObjectInteraction = collision.GetComponent<IInteraction>();
+        currentHoveredEquipment = collision.GetComponent<Equipment>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("In area!");
+        Debug.Log("In area enter! Name: " + collision.gameObject.name);
         isInHoverArea = true;
-        currentObjectInteraction = collision.GetComponent<IInteraction>();
+        currentHoveredEquipment = collision.GetComponent<Equipment>();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("In area exit! Name: " + collision.gameObject.name);
         isInHoverArea = false;
-        currentObjectInteraction = null;
+        currentHoveredEquipment = null;
     }
 
-    public void Pickup(bool isIngredient)
+    public virtual void HoverInteraction(Equipment equipmentHovered)
     {
-        isCooking = false;
-        this.transform.SetParent(Picker.Instance.Handler.transform);
-        Picker.Instance.SetCurrentHeldItem(this);
-        this.transform.localPosition = Vector3.zero;
-
-        if(isIngredient)
-            currentSlotTaken.isPositionTaken = false;
+        Debug.Log("Implemented by Child");
     }
 
-    public void ResetTransform()
+    public virtual void PickupInteraction()
     {
-        gameObject.transform.localPosition = Vector3.zero;
-        gameObject.transform.localScale = new Vector3(1, 1, 1);
-    }
-
-    public Doneness GetCurrentDoneness()
-    {
-        return currentDoneness;
+        Debug.Log("Implemented by Child");
     }
 }

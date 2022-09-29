@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour, IInteraction
 {
-    public void HoverInteraction(Item item)
+    public void HoverInteraction(Equipment equipmentHovered)
     {
-        Picker.Instance.SetCurrentHeldItem(null, true);
+        throw new System.NotImplementedException();
+    }
+
+    public void PickupInteraction()
+    {
+        throw new System.NotImplementedException();
     }
 }
