@@ -15,6 +15,9 @@ public class Plate : Item, IInteraction
         if (ingredientToAdd.GetCurrentIngredientType() == IngredientTypes.Plates || currentIngredientsOnPlate.Contains(ingredientToAdd.GetCurrentIngredientType())) 
             return;
 
+        if (ingredientToAdd.GetCurrentDoneness() != Doneness.Cooked)
+            return;
+
         VerifyTacoRecipeExists(ingredientToAdd);
     }
 
