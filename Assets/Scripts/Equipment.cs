@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Equipment : MonoBehaviour
+public class Equipment : MonoBehaviour, IInteraction
 {
     [SerializeField] protected List<IngredientTypes> ingredientAllowed;
     [SerializeField] protected List<AreaPosition> itemPositions;
@@ -13,17 +13,10 @@ public class Equipment : MonoBehaviour
     public Texture2D cursorTexture;
     public Texture2D defaultCursorTexture;
     public Vector2 hotSpot = Vector2.zero;
-
-
-    //private void SetCursor()
-    //{
-    //    Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-    //}
-
-    //private void ResetCursor()
-    //{
-    //    Cursor.SetCursor(defaultCursorTexture, hotSpot, cursorMode);
-    //}    
+    public void HoverInteraction(Item item)
+    {
+        IsAbleToPlaceItem(item);
+    }
 
     public virtual void IsAbleToPlaceItem(Item currentHeldIngredient)
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-interface IEquipmentUI
+interface IInteraction
 {
-     
+    public void HoverInteraction(Item item);
 }

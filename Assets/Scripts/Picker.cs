@@ -57,50 +57,8 @@ public class Picker : MonoBehaviour
     {
         if (currentHeldItem == null)
             GrabItem();
-        else if(currentHeldItem.GetCurrentDoneness() == Doneness.Cooked)
-            PlaceItemOnPlate();
-        else 
-            PlaceItemOnEquipment();
-    }
 
-    private void PlaceItemOnPlate()
-    {
-        ContactFilter2D filter2D = new ContactFilter2D
-        {
-            layerMask = servingPlateLayer,
-        };
-
-        filter2D.useLayerMask = true;
-
-        RaycastHit2D[] results = new RaycastHit2D[1];
-        int objectsHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, filter2D, results, Mathf.Infinity);
-
-        Plate cachedPlate = results[0].collider.GetComponent<Plate>();
-        if (objectsHit > 0 && cachedPlate)
-        {
-            Debug.Log("Target: " + results[0].collider.gameObject.name);
-            cachedPlate.ItemPlace(currentHeldItem);
-        }
-    }
-
-    private void PlaceItemOnEquipment()
-    {
-        ContactFilter2D filter2D = new ContactFilter2D
-        {
-            layerMask = equipmentLayers,
-        };
-
-        filter2D.useLayerMask = true;
-
-        RaycastHit2D[] results = new RaycastHit2D[1];
-        int objectsHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, filter2D, results, Mathf.Infinity);
-
-        Equipment cachedEquipment = results[0].collider.GetComponent<Equipment>();
-        if (objectsHit > 0 && cachedEquipment)
-        {
-            Debug.Log("Target: " + results[0].collider.gameObject.name);
-            cachedEquipment.IsAbleToPlaceItem(currentHeldItem);
-        }
+        return;    
     }
 
     private void GrabItem()
@@ -145,20 +103,6 @@ public class Picker : MonoBehaviour
         {
             Debug.Log("Target: " + results[0].collider.gameObject.name);
             cachedSpawner.SpawnIngredient();
-        }
-    }
-
-    private void GrabCookedIngredient()
-    {
-        ContactFilter2D filter2D = new ContactFilter2D();
-        filter2D.layerMask = LayerMask.NameToLayer("Ingredients");
-
-        RaycastHit2D[] results = new RaycastHit2D[1];
-        int objectsHit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, filter2D, results, Mathf.Infinity);
-
-        if (objectsHit > 0)
-        {
-            Debug.Log("Target: " + results[0].collider.gameObject.name);
         }
     }
 

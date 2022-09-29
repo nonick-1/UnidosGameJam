@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,13 +20,14 @@ public class Item : MonoBehaviour
     AreaPosition currentSlotTaken;
 
     //Use to shift cooking sprites and doneness
-    bool isCooking;
+    bool isCooking, isInHoverArea;
     float timeElapsed = 0;
     Doneness currentDoneness = Doneness.Raw;
 
     //Will be used for Final Cooking Product and Ingredient Cooked
     protected SpriteRenderer currentSpriteRend;
 
+    IInteraction currentObjectInteraction;
 
     public void SetCurrentSlotTaken(AreaPosition slot) => currentSlotTaken = slot;
     public void SetIsCooking(bool isCookingCached) => isCooking = isCookingCached;
@@ -42,6 +44,12 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
+        if(isInHoverArea && Input.GetMouseButtonDown(0) && this == Picker.Instance.GetCurrentHeldItem())
+        {
+            Debug.Log("In hover area!");
+            currentObjectInteraction?.HoverInteraction(this);
+        }
+
         if(isCooking && (int)currentDoneness < cookingStageSprites.Length -1)
         {
             timeElapsed += Time.deltaTime;
@@ -53,6 +61,27 @@ public class Item : MonoBehaviour
                 timeElapsed = 0;
             }
         }
+    }
+
+    //Issue with Collisions being to close. Ex Leaving the Tortialla Plancha going into the Meat Side would trigger the Exit and not reset
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("In area! Name: " + collision.gameObject.name);
+        isInHoverArea = true;
+        currentObjectInteraction = collision.GetComponent<IInteraction>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("In area!");
+        isInHoverArea = true;
+        currentObjectInteraction = collision.GetComponent<IInteraction>();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isInHoverArea = false;
+        currentObjectInteraction = null;
     }
 
     public void Pickup(bool isIngredient)
