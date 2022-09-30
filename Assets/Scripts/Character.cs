@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Character : MonoBehaviour, IInteraction
+public class Character : MonoBehaviour
 {
     [SerializeField] List<TacoOrders> possibleTacoCombinations;
     [SerializeField] List<Sprite> characterOptions;
@@ -24,6 +24,8 @@ public class Character : MonoBehaviour, IInteraction
 
     TacoOrders currentOrder;
 
+    bool canStart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,8 @@ public class Character : MonoBehaviour, IInteraction
 
     private void Update()
     {
+        if (!canStart) { return; }
+
         if(Input.GetKeyDown(KeyCode.Tab))
         {
             OrderStartTween();
@@ -41,6 +45,16 @@ public class Character : MonoBehaviour, IInteraction
         {
             OrderCompleteTween();
         }
+    }
+
+    private void OnEnable()
+    {
+        UIManager.onStart += OrderStartTween;
+    }
+
+    private void OnDisable()
+    {
+        UIManager.onStart -= OrderStartTween;
     }
 
     private void OrderStartTween()
@@ -66,16 +80,6 @@ public class Character : MonoBehaviour, IInteraction
         var randomIndex = Random.Range(0, possibleTacoCombinations.Count);
         currentOrder = possibleTacoCombinations[randomIndex];
         foodOrder.sprite = currentOrder.finalTacoWanted;
-    }
-
-    public void HoverInteraction()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void PickupInteraction()
-    {
-        throw new System.NotImplementedException();
     }
 }
 

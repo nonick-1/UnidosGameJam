@@ -24,6 +24,8 @@ public class Picker : MonoBehaviour
     [SerializeField] LayerMask ingredientsLayer;
     [SerializeField] LayerMask servingPlateLayer;
 
+    bool canStart;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -44,6 +46,8 @@ public class Picker : MonoBehaviour
 
     private void Update()
     {
+        if (!canStart) { return; }
+
         MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Handler.transform.position = new Vector3(MousePosition.x, MousePosition.y, 0);
 
@@ -56,6 +60,16 @@ public class Picker : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        UIManager.onStart += () => canStart = true;
+    }
+
+    private void OnDisable()
+    {
+        UIManager.onStart -= () => canStart = false;
+    }
+
     public void Interact()
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, ~equipmentLayers);
@@ -64,48 +78,13 @@ public class Picker : MonoBehaviour
         {
             Item cachedItem = hit.collider.GetComponent<Item>();
             Spawner cachedSpawner = hit.collider.GetComponent<Spawner>();
-            Plate cachedPlate = hit.collider.GetComponent<Plate>();
 
             if (cachedItem)
                 cachedItem.PickupInteraction();
             else if (cachedSpawner)
                 cachedSpawner.CreateItem();
-            else
-                Debug.Log("Hit nothing!");
-
-            if (cachedPlate)
-                Debug.Log("Plate hit!");
         }
     }
-
-    //private void GrabItem()
-    //{
-    //    RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, ~LayerMask.NameToLayer("Equipment"));
-
-    //    //TODO: Implement Interface ISpawn
-    //    Item cachedItem = hit.collider.GetComponent<Item>();
-    //    Spawner cachedSpawner = hit.collider.GetComponent<Spawner>();
-    //    PlateSpawner cachedPlateSpawner = hit.collider.GetComponent<PlateSpawner>();
-
-    //    if (cachedPlateSpawner)
-    //    {
-    //        cachedPlateSpawner.SpawnIngredient();
-    //    }
-    //    else if(cachedItem)
-    //    {
-    //        if(cachedItem.GetCurrentItemType() == ItemType.Plates)
-    //        {
-    //            cachedItem.Pickup(false);
-    //        }
-    //        else
-    //            cachedItem.Pickup(true);
-    //    }
-    //    else if(cachedSpawner)
-    //    {
-    //        Debug.Log("Target: " + hit.collider.gameObject.name);
-    //        cachedSpawner.SpawnIngredient();
-    //    }
-    //}
 
     public Item GetCurrentHeldItem()
     {
