@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class Character : MonoBehaviour
 {
@@ -20,14 +21,10 @@ public class Character : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     [SerializeField] float tweenEndScale = 1f;
-    [SerializeField] float tweenEndScaleTime = 3f;
-
     [SerializeField] float tweenStartLocalMoveY = .8f;
     [SerializeField] float tweenEndLocalMoveY = 5f;
-    [SerializeField] float tweenLocalMoveYTime = 3f;
-
+    [SerializeField] float tweenDuration = 3f;
     [SerializeField] float tweenEndFade = 1f;
-    [SerializeField] float tweenEndFadeTime = 3f;
 
     TacoOrders currentOrder;
 
@@ -87,27 +84,30 @@ public class Character : MonoBehaviour
             onFailedOrder?.Invoke();
 
         Picker.Instance.SetCurrentHeldItem(null, true);
+        OrderCompleteTween(OrderStartTween);
     }
 
     private void OrderStartTween()
     {
-        transform.DOScale(tweenEndScale, tweenEndScaleTime);
-        transform.DOLocalMoveY(tweenEndLocalMoveY, tweenLocalMoveYTime);
-        spriteRenderer.DOFade(tweenEndFade, tweenEndFadeTime);
+        SetPlateOrder();
 
-        chatBubble.DOFade(tweenEndFade, tweenEndFadeTime).OnComplete(() => SetTargetOrder());
+        transform.DOScale(tweenEndScale, tweenEndFade);
+        transform.DOLocalMoveY(tweenEndLocalMoveY, tweenEndFade);
+        spriteRenderer.DOFade(tweenEndFade, tweenEndFade);
+
+        chatBubble.DOFade(tweenEndFade, tweenEndFade);
     }
 
-    private void OrderCompleteTween()
+    private void OrderCompleteTween(UnityAction callback = null)
     {
-        transform.DOScale(0, tweenEndScaleTime);
-        transform.DOLocalMoveY(tweenStartLocalMoveY, tweenLocalMoveYTime);
-        spriteRenderer.DOFade(0, tweenEndFadeTime);
+        transform.DOScale(0, tweenEndFade);
+        transform.DOLocalMoveY(tweenStartLocalMoveY, tweenEndFade);
+        spriteRenderer.DOFade(0, tweenEndFade);
 
-        chatBubble.DOFade(0, tweenEndFadeTime);
+        chatBubble.DOFade(0, tweenEndFade).OnComplete(() => callback?.Invoke());
     }
 
-    private void SetTargetOrder()
+    private void SetPlateOrder()
     {
         var randomIndex = Random.Range(0, possibleTacoCombinations.Count);
         currentOrder = possibleTacoCombinations[randomIndex];
