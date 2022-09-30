@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trash : MonoBehaviour, IInteraction
+public class Trash : Equipment
 {
-    public void HoverInteraction()
+    public override bool IsAbleToPlaceItem(Item currentHeldIngredient)
     {
-        throw new System.NotImplementedException();
-    }
-
-    public void PickupInteraction()
-    {
-        throw new System.NotImplementedException();
+        Picker.Instance.SetCurrentHeldItem(null, true); //Refactor
+        return true;
     }
 }

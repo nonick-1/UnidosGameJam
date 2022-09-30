@@ -728,7 +728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611963646}
   - component: {fileID: 611963647}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Position 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1216,6 +1216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde7c15cdc0b3c2489ee24703fd5b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingredientAllowed: 
+  itemPositions: []
 --- !u!61 &767627005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1716,7 +1718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1044821316}
   - component: {fileID: 1044821317}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Position 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1800,7 +1802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115786214}
   - component: {fileID: 1115786215}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Position 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,7 +1886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157350684}
   - component: {fileID: 1157350685}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Position 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2377,7 +2379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399191822}
   - component: {fileID: 1399191823}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Position 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2652,7 +2654,7 @@ GameObject:
   - component: {fileID: 1479080689}
   - component: {fileID: 1479080688}
   - component: {fileID: 1479080692}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Equipment - Plancha Plate Section
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2838,7 +2840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481137588}
   - component: {fileID: 1481137589}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Position 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3606,7 +3608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884739088}
   - component: {fileID: 1884739089}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Position 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3690,7 +3692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1895464268}
   - component: {fileID: 1895464269}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Position 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3942,7 +3944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953491247}
   - component: {fileID: 1953491248}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Position 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
