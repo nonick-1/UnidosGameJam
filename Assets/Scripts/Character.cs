@@ -71,7 +71,8 @@ public class Character : MonoBehaviour
         {
             currentOrder.ingredientsNeeded.Sort();
             currentPlateOrder.GetCurrentIngredientsOnPlate().Sort();
-            equal = currentOrder.ingredientsNeeded.SequenceEqual(currentPlateOrder.GetCurrentIngredientsOnPlate());
+
+            equal = Enumerable.SequenceEqual(currentOrder.ingredientsNeeded.OrderBy(e => e), currentPlateOrder.GetCurrentIngredientsOnPlate().OrderBy(e => e));
 
             //Reusing Equal to verify contents
             if (equal)

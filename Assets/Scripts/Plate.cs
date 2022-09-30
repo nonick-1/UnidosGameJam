@@ -13,10 +13,23 @@ public class Plate : Item
 
     public void VerifyTacoRecipeExists(Item ingredientToAdd)
     {
-        List<ItemType> possibleTacoCombination = currentIngredientsOnPlate.Select(ingredient => new ItemType()).ToList();
+        if (currentIngredientsOnPlate.Contains(ingredientToAdd.GetCurrentItemType())) return;
+
+        List<ItemType> possibleTacoCombination = new List<ItemType>();
+
+        foreach(var currentIngred in currentIngredientsOnPlate)
+        {
+            possibleTacoCombination.Add(currentIngred);
+        }
+
         possibleTacoCombination.Add(ingredientToAdd.GetCurrentItemType());
 
-        foreach(var combination in allTacoCombinations)
+        foreach (var ingred in possibleTacoCombination)
+        {
+            Debug.Log("PossibleTacoCombination Taco: " + ingred);
+        }
+
+        foreach (var combination in allTacoCombinations)
         {
             var recipe = combination.recipeCombinations;
 
@@ -26,12 +39,15 @@ public class Plate : Item
             {
                 possibleTacoCombination.Sort();
                 recipe.Sort();
-                equal = possibleTacoCombination.SequenceEqual(recipe);
+
+                equal = Enumerable.SequenceEqual(possibleTacoCombination.OrderBy(e => e), recipe.OrderBy(e => e));
 
                 //Reusing Equal to verify contents
-                if(equal)
+                if (equal)
                 {
                     currentIngredientsOnPlate.Add(ingredientToAdd.GetCurrentItemType());
+                    Debug.Log("Combination Found: Added: " + ingredientToAdd.GetCurrentItemType());
+
                     currentSpriteRend.sprite = combination.desiredPlateLook;
 
                     Picker.Instance.SetCurrentHeldItem(null, true);
