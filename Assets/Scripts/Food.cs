@@ -13,12 +13,21 @@ public class Food : Item
 
     [SerializeField] Sprite[] cookingStageSprites;
 
+    [SerializeField] Animator smokeAnimator;
+
     Plate hoveredPlate;
+
+    public override void Start()
+    {
+        base.Start();
+        PlayCookingAnimation(false);
+    }
 
     public void Update()
     {
         if (isCooking && (int)currentDoneness < cookingStageSprites.Length - 1)
         {
+            PlayCookingAnimation(true);
             timeElapsed += Time.deltaTime;
 
             if (timeElapsed > timeBeforeNextCookedStage)
@@ -27,6 +36,9 @@ public class Food : Item
                 currentSpriteRend.sprite = cookingStageSprites[(int)currentDoneness];
                 timeElapsed = 0;
             }
+
+            if (currentDoneness == Doneness.Burnt)
+                PlayCookingAnimation(false);
         }
     }
 
@@ -46,6 +58,12 @@ public class Food : Item
     {
         base.OnTriggerStay2D(collision);
         hoveredPlate = collision.GetComponent<Plate>();
+    }
+
+    public void PlayCookingAnimation(bool isPlaying)
+    {
+        if(smokeAnimator)
+            smokeAnimator.gameObject.SetActive(isPlaying);
     }
 
     public Doneness GetCurrentDoneness()
@@ -72,6 +90,7 @@ public class Food : Item
     public override void PickupInteraction()
     {
         isCooking = false;
+        PlayCookingAnimation(false);
         this.transform.SetParent(Picker.Instance.Handler.transform);
         Picker.Instance.SetCurrentHeldItem(this);
         this.transform.localPosition = Vector3.zero;

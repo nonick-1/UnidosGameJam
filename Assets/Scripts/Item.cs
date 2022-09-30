@@ -25,7 +25,7 @@ public class Item : MonoBehaviour, IInteraction
     public void SetCurrentSlotTaken(AreaPosition slot) => currentSlotTaken = slot;
     public void SetCanBePickedUp(bool cachedCanBePickedUp) => canBePickedUp = cachedCanBePickedUp;
 
-    private void Start()
+    public virtual void Start()
     {
         currentSpriteRend = GetComponent<SpriteRenderer>();
     }
