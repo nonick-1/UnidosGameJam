@@ -20,6 +20,8 @@ public class Character : MonoBehaviour
     [SerializeField] SpriteRenderer foodOrder;
     SpriteRenderer spriteRenderer;
 
+    Sprite previousSprite;
+
     [SerializeField] float tweenEndScale = 1f;
     [SerializeField] float tweenStartLocalMoveY = .8f;
     [SerializeField] float tweenEndLocalMoveY = 5f;
@@ -109,6 +111,23 @@ public class Character : MonoBehaviour
 
     private void SetPlateOrder()
     {
+        Sprite newSprite = null;
+
+        if(previousSprite == null)
+            newSprite = characterOptions[Random.Range(0, characterOptions.Count)];
+        else
+        {
+            newSprite = characterOptions[Random.Range(0, characterOptions.Count)];
+            while (previousSprite == newSprite)
+            {
+                Debug.Log("Setting!");
+                newSprite = characterOptions[Random.Range(0, characterOptions.Count)];
+            }
+        }
+
+        spriteRenderer.sprite = newSprite;
+        previousSprite = newSprite;
+
         var randomIndex = Random.Range(0, possibleTacoCombinations.Count);
         currentOrder = possibleTacoCombinations[randomIndex];
         foodOrder.sprite = currentOrder.finalTacoWanted;

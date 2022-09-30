@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 2048327216359915830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.66, y: 5, z: 10.339722}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 949935692607941805}
@@ -162,7 +162,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 51ecf01da708afc418d48fe045352c96, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -261,15 +261,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0edb44c041d93184e8341d659c8afa6c, type: 3}
   - {fileID: 21300000, guid: a29c5a791824f55418af526a36c62c18, type: 3}
   - {fileID: 21300000, guid: 51ecf01da708afc418d48fe045352c96, type: 3}
+  - {fileID: 21300000, guid: 88e6ef0d8a46ad14295e50dddf868166, type: 3}
+  - {fileID: 21300000, guid: 6d3bb729be6f52743ab1a76d1adb6568, type: 3}
   chatBubble: {fileID: 6712172814376925892}
   foodOrder: {fileID: 210720176221907162}
   tweenEndScale: 1
-  tweenEndScaleTime: 3
   tweenStartLocalMoveY: 0.8
   tweenEndLocalMoveY: 5
-  tweenLocalMoveYTime: 3
+  tweenDuration: 3
   tweenEndFade: 1
-  tweenEndFadeTime: 3
 --- !u!61 &7906774731350813492
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

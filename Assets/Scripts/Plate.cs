@@ -13,8 +13,6 @@ public class Plate : Item
 
     public void VerifyTacoRecipeExists(Item ingredientToAdd)
     {
-        Debug.Log("Verifyinig!");
-
         List<ItemType> possibleTacoCombination = currentIngredientsOnPlate.Select(ingredient => new ItemType()).ToList();
         possibleTacoCombination.Add(ingredientToAdd.GetCurrentItemType());
 
@@ -35,8 +33,6 @@ public class Plate : Item
                 {
                     currentIngredientsOnPlate.Add(ingredientToAdd.GetCurrentItemType());
                     currentSpriteRend.sprite = combination.desiredPlateLook;
-
-                    Debug.Log("Found Sprite!");
 
                     Picker.Instance.SetCurrentHeldItem(null, true);
                 }

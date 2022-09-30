@@ -20,7 +20,6 @@ public class DropOffArea : MonoBehaviour
                 currentHeldIngredient.SetCurrentSlotTaken(areaPosition);
                 currentHeldIngredient = null;
                 Picker.Instance.SetCurrentHeldItem(null); //Refactor
-                Debug.Log("Placed!");
                 return true;
             }
         }

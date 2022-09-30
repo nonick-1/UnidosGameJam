@@ -61,6 +61,7 @@ public class Food : Item
         {
             currentHoveredEquipment.IsAbleToPlaceItem(this);
             isCooking = true;
+            Debug.Log("Is cooking tortilla!");
         }
         else if(hoveredPlate && this.currentDoneness == Doneness.Cooked)
         {
@@ -70,8 +71,6 @@ public class Food : Item
 
     public override void PickupInteraction()
     {
-        Debug.Log("Picked up!");
-
         isCooking = false;
         this.transform.SetParent(Picker.Instance.Handler.transform);
         Picker.Instance.SetCurrentHeldItem(this);

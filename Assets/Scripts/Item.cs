@@ -61,14 +61,12 @@ public class Item : MonoBehaviour, IInteraction
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("In area enter! Name: " + collision.gameObject.name);
         isInHoverArea = true;
         currentHoveredEquipment = collision.GetComponent<DropOffArea>();
     }
 
     public virtual void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("In area exit! Name: " + collision.gameObject.name);
         isInHoverArea = false;
         currentHoveredEquipment = null;
     }

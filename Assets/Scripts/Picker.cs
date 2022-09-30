@@ -83,6 +83,8 @@ public class Picker : MonoBehaviour
                 cachedItem.PickupInteraction();
             else if (cachedSpawner)
                 cachedSpawner.CreateItem();
+
+            Debug.Log("Name: " + hit.collider.name);
         }
     }
 

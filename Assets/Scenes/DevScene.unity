@@ -966,7 +966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611963646}
   - component: {fileID: 611963647}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Position 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2170,7 +2170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1044821316}
   - component: {fileID: 1044821317}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Position 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2254,7 +2254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115786214}
   - component: {fileID: 1115786215}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Position 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2338,7 +2338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157350684}
   - component: {fileID: 1157350685}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Position 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2647,7 +2647,7 @@ MonoBehaviour:
   ingredientLocation: {fileID: 5429281020399951943, guid: 7066d8aee3698184b915012285ecda85, type: 3}
   equipmentLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
   ingredientsLayer:
     serializedVersion: 2
     m_Bits: 136
@@ -2983,7 +2983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399191822}
   - component: {fileID: 1399191823}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Position 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3257,7 +3257,7 @@ GameObject:
   - component: {fileID: 1479080689}
   - component: {fileID: 1479080688}
   - component: {fileID: 1479080692}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Equipment - Plancha Plate Section
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3429,7 +3429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481137588}
   - component: {fileID: 1481137589}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Position 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4407,7 +4407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884739088}
   - component: {fileID: 1884739089}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Position 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4491,7 +4491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1895464268}
   - component: {fileID: 1895464269}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Position 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4743,7 +4743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953491247}
   - component: {fileID: 1953491248}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Position 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5630,18 +5630,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2048327216359915816, guid: b880d878844b26e429fa36666443bae2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2048327216359915816, guid: b880d878844b26e429fa36666443bae2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2048327216359915816, guid: b880d878844b26e429fa36666443bae2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2048327216359915816, guid: b880d878844b26e429fa36666443bae2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.53
       objectReference: {fileID: 0}
@@ -5681,21 +5669,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2048327216359915817, guid: b880d878844b26e429fa36666443bae2, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2048327216359915830, guid: b880d878844b26e429fa36666443bae2, type: 3}
       propertyPath: m_Name
       value: Character - 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7762230165452512029, guid: b880d878844b26e429fa36666443bae2, type: 3}
-      propertyPath: tweenStartLocalMoveY
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7906774731350813492, guid: b880d878844b26e429fa36666443bae2, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b880d878844b26e429fa36666443bae2, type: 3}
