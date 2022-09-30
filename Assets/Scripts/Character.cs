@@ -68,7 +68,7 @@ public class Character : MonoBehaviour, IInteraction
         foodOrder.sprite = currentOrder.finalTacoWanted;
     }
 
-    public void HoverInteraction(Equipment equipmentHovered)
+    public void HoverInteraction()
     {
         throw new System.NotImplementedException();
     }

@@ -125,8 +125,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
-  timebeforeNextCookedStage: 5
+  timeBeforeNextCookedStage: 5
   cookingStageSprites:
   - {fileID: 21300000, guid: a0ae31cd8f2729b48acbe1c163c59fa0, type: 3}
   - {fileID: 21300000, guid: e0ff2bb55f89389438d55ca85ac3967d, type: 3}
   - {fileID: 21300000, guid: 6689aa91f02599c458fcc4d5c4503f37, type: 3}
+  foodPlating:
+    serializedVersion: 2
+    m_Bits: 256
+  defaultIngredientLayer:
+    serializedVersion: 2
+    m_Bits: 8

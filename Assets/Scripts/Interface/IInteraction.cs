@@ -4,6 +4,6 @@ using UnityEngine;
 
 interface IInteraction
 {
-    public void HoverInteraction(Equipment equipmentHovered);
+    public void HoverInteraction();
     public void PickupInteraction();
 }

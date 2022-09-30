@@ -9,8 +9,10 @@ public class Plate : Item
     [SerializeField] List<TacoCombinations> allTacoCombinations;
     List<ItemType> currentIngredientsOnPlate = new List<ItemType>();
 
-    private void VerifyTacoRecipeExists(Item ingredientToAdd)
+    public void VerifyTacoRecipeExists(Item ingredientToAdd)
     {
+        Debug.Log("Verifyinig!");
+
         List<ItemType> possibleTacoCombination = currentIngredientsOnPlate.Select(ingredient => new ItemType()).ToList();
         possibleTacoCombination.Add(ingredientToAdd.GetCurrentItemType());
 
@@ -40,7 +42,7 @@ public class Plate : Item
         }
     }
 
-    public override void HoverInteraction(Equipment equipmentHovered)
+    public override void HoverInteraction()
     {
         currentHoveredEquipment.IsAbleToPlaceItem(this);
     }

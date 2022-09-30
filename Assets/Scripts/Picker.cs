@@ -47,22 +47,35 @@ public class Picker : MonoBehaviour
         MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Handler.transform.position = new Vector3(MousePosition.x, MousePosition.y, 0);
 
-        if(Input.GetMouseButtonDown(0))
-            Interact();
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(currentHeldItem == null)
+                Interact();
+            else
+                currentHeldItem.ItemHoverInteraction();
+        }
     }
 
-    private void Interact()
+    public void Interact()
     {
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, ~LayerMask.NameToLayer("Equipment"));
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity, ~equipmentLayers);
 
-        Item cachedItem = hit.collider.GetComponent<Item>();
-        Spawner cachedSpawner = hit.collider.GetComponent<Spawner>();
+        if(hit)
+        {
+            Item cachedItem = hit.collider.GetComponent<Item>();
+            Spawner cachedSpawner = hit.collider.GetComponent<Spawner>();
+            Plate cachedPlate = hit.collider.GetComponent<Plate>();
 
-        if (cachedItem)
-            cachedItem.PickupInteraction();
-        else if(cachedSpawner)
-            cachedSpawner.CreateItem();
+            if (cachedItem)
+                cachedItem.PickupInteraction();
+            else if (cachedSpawner)
+                cachedSpawner.CreateItem();
+            else
+                Debug.Log("Hit nothing!");
+
+            if (cachedPlate)
+                Debug.Log("Plate hit!");
+        }
     }
 
     //private void GrabItem()
@@ -101,7 +114,6 @@ public class Picker : MonoBehaviour
 
     public void SetCurrentHeldItem(Item item, bool removedChild = false)
     {
-        Debug.Log("Item Set!");
         currentHeldItem = item;
 
         //Used to remove the combined cooking item

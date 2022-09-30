@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour, IInteraction
 {
-    public void HoverInteraction(Equipment equipmentHovered)
+    public void HoverInteraction()
     {
         throw new System.NotImplementedException();
     }

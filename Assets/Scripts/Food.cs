@@ -13,10 +13,10 @@ public class Food : Item
 
     [SerializeField] Sprite[] cookingStageSprites;
 
-    public override void Update()
-    {
-        base.Update();
+    Plate hoveredPlate;
 
+    public void Update()
+    {
         if (isCooking && (int)currentDoneness < cookingStageSprites.Length - 1)
         {
             timeElapsed += Time.deltaTime;
@@ -30,6 +30,24 @@ public class Food : Item
         }
     }
 
+    public override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
+        hoveredPlate = collision.GetComponent<Plate>();
+    }
+
+    public override void OnTriggerExit2D(Collider2D collision)
+    {
+        base.OnTriggerExit2D(collision);
+        hoveredPlate = null;
+    }
+
+    public override void OnTriggerStay2D(Collider2D collision)
+    {
+        base.OnTriggerStay2D(collision);
+        hoveredPlate = collision.GetComponent<Plate>();
+    }
+
     public Doneness GetCurrentDoneness()
     {
         return currentDoneness;
@@ -37,14 +55,23 @@ public class Food : Item
 
     public void SetIsCooking(bool isCookingCached) => isCooking = isCookingCached;
 
-    public override void HoverInteraction(Equipment equipmentHovered)
+    public override void HoverInteraction()
     {
-        if (currentHoveredEquipment.IsAbleToPlaceItem(this))
+        if (currentHoveredEquipment)
+        {
+            currentHoveredEquipment.IsAbleToPlaceItem(this);
             isCooking = true;
+        }
+        else if(hoveredPlate)
+        {
+            hoveredPlate.VerifyTacoRecipeExists(this);
+        }
     }
 
     public override void PickupInteraction()
     {
+        Debug.Log("Picked up!");
+
         isCooking = false;
         this.transform.SetParent(Picker.Instance.Handler.transform);
         Picker.Instance.SetCurrentHeldItem(this);
