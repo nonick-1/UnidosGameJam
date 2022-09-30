@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlateTable : Equipment
+public class PlateTable : DropOffArea
 {
     public override bool IsAbleToPlaceItem(Item currentHeldIngredient)
     {

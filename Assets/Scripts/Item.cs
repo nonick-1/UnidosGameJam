@@ -20,7 +20,7 @@ public class Item : MonoBehaviour, IInteraction
     //Will be used for Final Cooking Product and Ingredient Cooked
     protected SpriteRenderer currentSpriteRend;
 
-    protected Equipment currentHoveredEquipment;
+    protected DropOffArea currentHoveredEquipment;
 
     public void SetCurrentSlotTaken(AreaPosition slot) => currentSlotTaken = slot;
     public void SetCanBePickedUp(bool cachedCanBePickedUp) => canBePickedUp = cachedCanBePickedUp;
@@ -45,7 +45,7 @@ public class Item : MonoBehaviour, IInteraction
         return currentSlotTaken;
     } 
     
-    //Used to be called in picker
+    //Called in picker
     public void ItemHoverInteraction()
     {
         if (isInHoverArea)
@@ -56,14 +56,14 @@ public class Item : MonoBehaviour, IInteraction
     public virtual void OnTriggerStay2D(Collider2D collision)
     {
         isInHoverArea = true;
-        currentHoveredEquipment = collision.GetComponent<Equipment>();
+        currentHoveredEquipment = collision.GetComponent<DropOffArea>();
     }
 
     public virtual void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("In area enter! Name: " + collision.gameObject.name);
         isInHoverArea = true;
-        currentHoveredEquipment = collision.GetComponent<Equipment>();
+        currentHoveredEquipment = collision.GetComponent<DropOffArea>();
     }
 
     public virtual void OnTriggerExit2D(Collider2D collision)

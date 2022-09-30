@@ -9,6 +9,8 @@ public class Plate : Item
     [SerializeField] List<TacoCombinations> allTacoCombinations;
     List<ItemType> currentIngredientsOnPlate = new List<ItemType>();
 
+    Character hoveredCharacter;
+
     public void VerifyTacoRecipeExists(Item ingredientToAdd)
     {
         Debug.Log("Verifyinig!");
@@ -42,9 +44,36 @@ public class Plate : Item
         }
     }
 
+    public override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
+        hoveredCharacter = collision.GetComponent<Character>();
+    }
+
+    public override void OnTriggerExit2D(Collider2D collision)
+    {
+        base.OnTriggerExit2D(collision);
+        hoveredCharacter = null;
+    }
+
+    public override void OnTriggerStay2D(Collider2D collision)
+    {
+        base.OnTriggerStay2D(collision);
+        hoveredCharacter = collision.GetComponent<Character>();
+    }
+
     public override void HoverInteraction()
     {
-        currentHoveredEquipment.IsAbleToPlaceItem(this);
+        if (currentHoveredEquipment)
+            currentHoveredEquipment.IsAbleToPlaceItem(this);
+        else if (hoveredCharacter)
+            hoveredCharacter.TurnInFood(this);
+
+    }
+
+    public List<ItemType> GetCurrentIngredientsOnPlate()
+    {
+        return currentIngredientsOnPlate;
     }
 
     public override void PickupInteraction()

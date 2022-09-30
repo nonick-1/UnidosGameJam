@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Equipment : MonoBehaviour
+public class DropOffArea : MonoBehaviour
 {
     [SerializeField] protected List<ItemType> ingredientAllowed;
     [SerializeField] protected List<AreaPosition> itemPositions;

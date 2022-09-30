@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using DG.Tweening;
 
 public class Character : MonoBehaviour
 {
+    public delegate void OnSuccessfulOrder();
+    public static event OnSuccessfulOrder onSuccessfulOrder;
+
+    public delegate void OnFailedOrder();
+    public static event OnFailedOrder onFailedOrder;
+
     [SerializeField] List<TacoOrders> possibleTacoCombinations;
     [SerializeField] List<Sprite> characterOptions;
 
@@ -30,7 +37,6 @@ public class Character : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        OrderStartTween();
     }
 
     private void Update()
@@ -55,6 +61,32 @@ public class Character : MonoBehaviour
     private void OnDisable()
     {
         UIManager.onStart -= OrderStartTween;
+    }
+
+    public void TurnInFood(Plate currentPlateOrder)
+    {
+        Debug.Log("Turned in food!");
+        var equal = (currentOrder.ingredientsNeeded.Count == currentPlateOrder.GetCurrentIngredientsOnPlate().Count);
+
+        if (equal)
+        {
+            currentOrder.ingredientsNeeded.Sort();
+            currentPlateOrder.GetCurrentIngredientsOnPlate().Sort();
+            equal = currentOrder.ingredientsNeeded.SequenceEqual(currentPlateOrder.GetCurrentIngredientsOnPlate());
+
+            //Reusing Equal to verify contents
+            if (equal)
+            {
+                Debug.Log("Combination Correct!");
+                onSuccessfulOrder?.Invoke();
+            }
+            else
+                onFailedOrder?.Invoke();
+        }
+        else
+            onFailedOrder?.Invoke();
+
+        Picker.Instance.SetCurrentHeldItem(null, true);
     }
 
     private void OrderStartTween()

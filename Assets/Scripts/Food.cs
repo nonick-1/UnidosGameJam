@@ -62,7 +62,7 @@ public class Food : Item
             currentHoveredEquipment.IsAbleToPlaceItem(this);
             isCooking = true;
         }
-        else if(hoveredPlate)
+        else if(hoveredPlate && this.currentDoneness == Doneness.Cooked)
         {
             hoveredPlate.VerifyTacoRecipeExists(this);
         }
