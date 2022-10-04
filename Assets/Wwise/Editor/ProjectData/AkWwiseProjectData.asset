@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -21,13 +21,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: a2938d14df337c4e8c5f3da42dc8f8f2
-    ParentPath: Virtual Acoustics\Default Work Unit
+    ParentPath: Virtual Acoustics/Default Work Unit
     guid: a2938d14df337c4e8c5f3da42dc8f8f2
     GuidInternal: 
-    m_lastTime: -8585373949469481929
+    m_lastTime: -8585366945133668827
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -35,10 +35,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 8ef4c201afac954b98dac1d59214c944
-    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: 8ef4c201afac954b98dac1d59214c944
     GuidInternal: 
-    m_lastTime: -8585373949469665758
+    m_lastTime: -8585366945135296788
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -53,9 +53,9 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -63,10 +63,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: cb4eb8d37806e647a8e0edd770c6a074
-    ParentPath: SoundBanks\Default Work Unit
+    ParentPath: SoundBanks/Default Work Unit
     guid: cb4eb8d37806e647a8e0edd770c6a074
     GuidInternal: 
-    m_lastTime: -8585367705955420844
+    m_lastTime: -8585366875949808185
     List:
     - name: Master_SoundBank
       guid: 6c1b9c9c752b0f46b0296a5b59545541
@@ -81,9 +81,9 @@ MonoBehaviour:
       - ElementName: Master_SoundBank
         ObjectType: 7
         guid: 6c1b9c9c752b0f46b0296a5b59545541
-      Path: SoundBanks\Default Work Unit\Master_SoundBank
+      Path: SoundBanks/Default Work Unit/Master_SoundBank
   EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -91,14 +91,14 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 49a907d9f173b34eaa1686fc9d3e4f9a
-    ParentPath: Events\Default Work Unit
+    ParentPath: Events/Default Work Unit
     guid: 49a907d9f173b34eaa1686fc9d3e4f9a
     GuidInternal: 
-    m_lastTime: -8585367705960353835
+    m_lastTime: -8585366809883582995
     List:
-    - name: Play_AmbienceTest
-      guid: a59c2a685a3ca8438510f09eb9a3b1be
-      id: 1550126206
+    - name: FoodTruck_01
+      guid: f6fa7b3536a00e4988fddd63da1ccf50
+      id: 1197313924
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -106,15 +106,321 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 49a907d9f173b34eaa1686fc9d3e4f9a
-      - ElementName: Play_AmbienceTest
+      - ElementName: FoodTruck_01
+        ObjectType: 3
+        guid: f6fa7b3536a00e4988fddd63da1ccf50
+      Path: Events/Default Work Unit/FoodTruck_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: FoodTruck_Meat_Plancha_1
+      guid: 84d43d5e584b144bb6c7941b68d1e1bd
+      id: 2548292264
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: FoodTruck_Meat_Plancha_1
+        ObjectType: 3
+        guid: 84d43d5e584b144bb6c7941b68d1e1bd
+      Path: Events/Default Work Unit/FoodTruck_Meat_Plancha_1
+      maxAttenuation: 0
+      maxDuration: 10.844563
+      minDuration: 10.844563
+    - name: FoodTruck_Meat_Plancha_2
+      guid: 5cd6e189aa8b4a4281223b96f5da7a2f
+      id: 2548292267
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: FoodTruck_Meat_Plancha_2
+        ObjectType: 3
+        guid: 5cd6e189aa8b4a4281223b96f5da7a2f
+      Path: Events/Default Work Unit/FoodTruck_Meat_Plancha_2
+      maxAttenuation: 0
+      maxDuration: 10.844563
+      minDuration: 10.844563
+    - name: FoodTruck_Meat_Plancha_3
+      guid: dd8650e04424f540ab901c38da6415e0
+      id: 2548292266
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: FoodTruck_Meat_Plancha_3
+        ObjectType: 3
+        guid: dd8650e04424f540ab901c38da6415e0
+      Path: Events/Default Work Unit/FoodTruck_Meat_Plancha_3
+      maxAttenuation: 0
+      maxDuration: 9.548333
+      minDuration: 9.548333
+    - name: FoodTruck_Meat_Plancha_4
+      guid: ac0fb0111fb55c4e8ff52da08ff0e56e
+      id: 2548292269
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: FoodTruck_Meat_Plancha_4
+        ObjectType: 3
+        guid: ac0fb0111fb55c4e8ff52da08ff0e56e
+      Path: Events/Default Work Unit/FoodTruck_Meat_Plancha_4
+      maxAttenuation: 0
+      maxDuration: 8.326771
+      minDuration: 8.326771
+    - name: Play_Ambience
+      guid: a59c2a685a3ca8438510f09eb9a3b1be
+      id: 278617630
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: Play_Ambience
         ObjectType: 3
         guid: a59c2a685a3ca8438510f09eb9a3b1be
-      Path: Events\Default Work Unit\Play_AmbienceTest
+      Path: Events/Default Work Unit/Play_Ambience
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Music
+      guid: 4c7bd65e4a93de4d91092593d5c1ba05
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: Play_Music
+        ObjectType: 3
+        guid: 4c7bd65e4a93de4d91092593d5c1ba05
+      Path: Events/Default Work Unit/Play_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_SFX_FoodTruck_OilBrn_1
+      guid: 6f336aa4144d2c4ca2204afa59af0bd3
+      id: 2895723152
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: Play_SFX_FoodTruck_OilBrn_1
+        ObjectType: 3
+        guid: 6f336aa4144d2c4ca2204afa59af0bd3
+      Path: Events/Default Work Unit/Play_SFX_FoodTruck_OilBrn_1
+      maxAttenuation: 0
+      maxDuration: 14.626104
+      minDuration: 14.626104
+    - name: Play_SFX_FoodTruck_OilBrn_2
+      guid: 65b6a911e0f8ea41afa9accaff6a9ce8
+      id: 2895723155
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: Play_SFX_FoodTruck_OilBrn_2
+        ObjectType: 3
+        guid: 65b6a911e0f8ea41afa9accaff6a9ce8
+      Path: Events/Default Work Unit/Play_SFX_FoodTruck_OilBrn_2
+      maxAttenuation: 0
+      maxDuration: 13.251
+      minDuration: 13.251
+    - name: Stop_Ambience
+      guid: dfe06b290362f744b9f820ccc8451a8e
+      id: 2477713992
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: Stop_Ambience
+        ObjectType: 3
+        guid: dfe06b290362f744b9f820ccc8451a8e
+      Path: Events/Default Work Unit/Stop_Ambience
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Music
+      guid: 2063ef88f013ee439c3ffb851f37cc67
+      id: 2837384057
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: Stop_Music
+        ObjectType: 3
+        guid: 2063ef88f013ee439c3ffb851f37cc67
+      Path: Events/Default Work Unit/Stop_Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: UI_Button_Negative_1
+      guid: de6887f8024a6d47b681fa0f8845ac75
+      id: 3160767208
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: UI_Button_Negative_1
+        ObjectType: 3
+        guid: de6887f8024a6d47b681fa0f8845ac75
+      Path: Events/Default Work Unit/UI_Button_Negative_1
+      maxAttenuation: 0
+      maxDuration: 0.26525
+      minDuration: 0.26525
+    - name: UI_Button_Negative_2
+      guid: 850553de7bf2944faed69e3303adb2eb
+      id: 3160767211
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: UI_Button_Negative_2
+        ObjectType: 3
+        guid: 850553de7bf2944faed69e3303adb2eb
+      Path: Events/Default Work Unit/UI_Button_Negative_2
+      maxAttenuation: 0
+      maxDuration: 0.300583
+      minDuration: 0.300583
+    - name: UI_Button_Negative_3
+      guid: bbbe0f97e9e24a468ce9e5b07ab6d4ed
+      id: 3160767210
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: UI_Button_Negative_3
+        ObjectType: 3
+        guid: bbbe0f97e9e24a468ce9e5b07ab6d4ed
+      Path: Events/Default Work Unit/UI_Button_Negative_3
+      maxAttenuation: 0
+      maxDuration: 0.248458
+      minDuration: 0.248458
+    - name: UI_Button_Negative_4
+      guid: 0e2b65c822d7bd44a615193c17de08eb
+      id: 3160767213
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: UI_Button_Negative_4
+        ObjectType: 3
+        guid: 0e2b65c822d7bd44a615193c17de08eb
+      Path: Events/Default Work Unit/UI_Button_Negative_4
+      maxAttenuation: 0
+      maxDuration: 0.279729
+      minDuration: 0.279729
+    - name: UI_Button_Negative_5
+      guid: 05a2012101e4f24693d6fb22f5bc8138
+      id: 3160767212
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: UI_Button_Negative_5
+        ObjectType: 3
+        guid: 05a2012101e4f24693d6fb22f5bc8138
+      Path: Events/Default Work Unit/UI_Button_Negative_5
+      maxAttenuation: 0
+      maxDuration: 0.294208
+      minDuration: 0.294208
+    - name: UI_Button_Positive_1
+      guid: bdba59d2859945458d441a40ce63bb53
+      id: 1451237120
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: UI_Button_Positive_1
+        ObjectType: 3
+        guid: bdba59d2859945458d441a40ce63bb53
+      Path: Events/Default Work Unit/UI_Button_Positive_1
+      maxAttenuation: 0
+      maxDuration: 0.207333
+      minDuration: 0.207333
+    - name: UI_Button_Positive_2
+      guid: 2987c026f39e3146abd839d1395be46a
+      id: 1451237123
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: UI_Button_Positive_2
+        ObjectType: 3
+        guid: 2987c026f39e3146abd839d1395be46a
+      Path: Events/Default Work Unit/UI_Button_Positive_2
+      maxAttenuation: 0
+      maxDuration: 0.168542
+      minDuration: 0.168542
+    - name: UI_Button_Positive_3
+      guid: a908f74506fdac48977f8dfcd984cad7
+      id: 1451237122
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 49a907d9f173b34eaa1686fc9d3e4f9a
+      - ElementName: UI_Button_Positive_3
+        ObjectType: 3
+        guid: a908f74506fdac48977f8dfcd984cad7
+      Path: Events/Default Work Unit/UI_Button_Positive_3
+      maxAttenuation: 0
+      maxDuration: 0.205604
+      minDuration: 0.205604
   RtpcWwu:
-  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -122,13 +428,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 31e5c1c187b74c49a5c8f5957dbd9e8f
-    ParentPath: Game Parameters\Default Work Unit
+    ParentPath: Game Parameters/Default Work Unit
     guid: 31e5c1c187b74c49a5c8f5957dbd9e8f
     GuidInternal: 
-    m_lastTime: -8585373949469384291
+    m_lastTime: -8585366945135355845
     List: []
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -136,13 +442,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: f500c51ce5f3b3439389013e251f2293
-    ParentPath: States\Default Work Unit
+    ParentPath: States/Default Work Unit
     guid: f500c51ce5f3b3439389013e251f2293
     GuidInternal: 
-    m_lastTime: -8585373949469605645
+    m_lastTime: -8585366945133681028
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -150,13 +456,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: c7aab21f64802941bae76a3654786210
-    ParentPath: Switches\Default Work Unit
+    ParentPath: Switches/Default Work Unit
     guid: c7aab21f64802941bae76a3654786210
     GuidInternal: 
-    m_lastTime: -8585373949469625750
+    m_lastTime: -8585366945133679675
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers\Default Work Unit.wwu
+  - PhysicalPath: Triggers/Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -164,13 +470,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: c5d704447567be4dac9e2503bbdca61d
-    ParentPath: Triggers\Default Work Unit
+    ParentPath: Triggers/Default Work Unit
     guid: c5d704447567be4dac9e2503bbdca61d
     GuidInternal: 
-    m_lastTime: -8585373949469354386
+    m_lastTime: -8585366945133678146
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

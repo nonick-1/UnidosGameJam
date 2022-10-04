@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{7E1503A2-D7AD-4A7A-96F2-24A3BE07E4AE}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{7E1503A2-D7AD-4A7A-96F2-24A3BE07E4AE}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{7E1503A2-D7AD-4A7A-96F2-24A3BE07E4AE}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{BB4DF0DD-98EC-482E-AD6F-D1D3FD020BA1}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Ambience" ID="{682A9CA5-3C5A-43A8-8510-F09EB9A3B1BE}" WorkUnitID="{D907A949-73F1-4EB3-AA16-86FC9D3E4F9A}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Ambience" ID="{296BE0DF-6203-44F7-B9F8-20CCC8451A8E}" WorkUnitID="{D907A949-73F1-4EB3-AA16-86FC9D3E4F9A}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Music" ID="{5ED67B4C-934A-4DDE-9109-2593D5C1BA05}" WorkUnitID="{D907A949-73F1-4EB3-AA16-86FC9D3E4F9A}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="UI_Button_Positive_1" ID="{D259BABD-9985-4545-8D44-1A40CE63BB53}" WorkUnitID="{D907A949-73F1-4EB3-AA16-86FC9D3E4F9A}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

@@ -3,12 +3,274 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{D907A949-73F1-4EB3-AA16-86FC9D3E4F9A}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_AmbienceTest" ID="{682A9CA5-3C5A-43A8-8510-F09EB9A3B1BE}">
+				<Event Name="Play_Ambience" ID="{682A9CA5-3C5A-43A8-8510-F09EB9A3B1BE}">
 					<ChildrenList>
-						<Action Name="" ID="{0E814725-335C-4F05-823F-BCA7032424E4}" ShortID="314974837">
+						<Action Name="" ID="{5835309A-43FE-49CB-B878-6DCB0E7B5368}" ShortID="76353532">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="AMBIENCE INSIDE_01" ID="{7DF530A6-F1F6-4206-8417-ECE089E795E7}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+									<ObjectRef Name="Ambience_Birds_Randomizer" ID="{6AB911DD-0938-429F-8AF7-5A2070FB0DCD}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{196DA194-862E-4D51-A55C-5E058B19D923}" ShortID="1031245426">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Dogs_Randomizer" ID="{E42CD0ED-CF3B-4F5D-8016-1EE5F986C258}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6184BDCC-11D3-47ED-8C74-6A04F517B4AA}" ShortID="530776094">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Ambience_Street_Loop" ID="{C2F081A0-8199-4EF7-B915-486FD9434B9A}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Button_Positive_1" ID="{D259BABD-9985-4545-8D44-1A40CE63BB53}">
+					<ChildrenList>
+						<Action Name="" ID="{829AF475-202D-4B1D-9AD1-898A2DEBE227}" ShortID="1056562200">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Button_Positive_1" ID="{83494151-CEC9-4348-B78A-8F4E6C3ED107}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9796CB10-BACD-4623-A0D7-9A94DA8C3144}" ShortID="976708848">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_Ambience" ID="{682A9CA5-3C5A-43A8-8510-F09EB9A3B1BE}" WorkUnitID="{D907A949-73F1-4EB3-AA16-86FC9D3E4F9A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{68885405-A4EC-47FC-B7A3-687773E37C3F}" ShortID="273185579">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main_Theme_1" ID="{0AF2DAF6-A9DA-4B8C-845B-69E1D5A95833}" WorkUnitID="{E5B043B6-5D0B-4FB2-89B2-56E443056326}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Button_Positive_2" ID="{26C08729-9EF3-4631-ABD8-39D1395BE46A}">
+					<ChildrenList>
+						<Action Name="" ID="{D14D1187-F2F4-445E-B22C-3E876E9F525E}" ShortID="464719360">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Button_Positive_2" ID="{8F42A415-CE3E-44E2-9C99-DE493B9CEE9D}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Button_Positive_3" ID="{45F708A9-FD06-48AC-977F-8DFCD984CAD7}">
+					<ChildrenList>
+						<Action Name="" ID="{CE08FD6F-784B-49C6-92F3-8777073825D4}" ShortID="95613695">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Button_Positive_3" ID="{52541EEB-188D-49AE-8B18-CEA602F50806}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Button_Negative_1" ID="{F88768DE-4A02-476D-B681-FA0F8845AC75}">
+					<ChildrenList>
+						<Action Name="" ID="{720B2F04-6B4D-4706-8100-CC3A0887978F}" ShortID="530507510">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Button_Negative_1" ID="{78CB1C7C-C576-4171-B989-8E5273C8CE51}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Button_Negative_2" ID="{DE530585-F27B-4F94-AED6-9E3303ADB2EB}">
+					<ChildrenList>
+						<Action Name="" ID="{BE702743-6504-4761-BCC1-F6848D60CE88}" ShortID="189961104">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Button_Negative_2" ID="{F7438445-B94D-4B28-84D0-24E2279C95BE}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Button_Negative_3" ID="{970FBEBB-E2E9-464A-8CE9-E5B07AB6D4ED}">
+					<ChildrenList>
+						<Action Name="" ID="{74C06BCA-4825-43DB-B921-ED2EDABE011E}" ShortID="917150054">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Button_Negative_3" ID="{C8F82F27-08CE-49F1-9EA2-86DFB76EDB23}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Button_Negative_5" ID="{2101A205-E401-46F2-93D6-FB22F5BC8138}">
+					<ChildrenList>
+						<Action Name="" ID="{ED00A1E6-E9F9-471F-8495-6D04ACB0EF89}" ShortID="420086675">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Button_Negative_5" ID="{A8150D1F-A2D4-4C34-A682-7AA071D51A72}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Button_Negative_4" ID="{C8652B0E-D722-44BD-A615-193C17DE08EB}">
+					<ChildrenList>
+						<Action Name="" ID="{D7C50195-65C3-4C77-8C0C-EEF37D82DC41}" ShortID="1053378841">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Button_Negative_4" ID="{E738EBA7-0A63-4C1B-8756-54F0DE0EE540}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FoodTruck_Meat_Plancha_1" ID="{5E3DD484-4B58-4B14-B6C7-941B68D1E1BD}">
+					<ChildrenList>
+						<Action Name="" ID="{B154AA3E-30C5-4963-8C43-7B03B553C314}" ShortID="930821048">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FoodTruck_MeatGrill_1" ID="{0DBFF603-C996-4966-B9E5-51DB0A2ADE3C}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FoodTruck_01" ID="{357BFAF6-A036-490E-88FD-DD63DA1CCF50}"/>
+				<Event Name="FoodTruck_Meat_Plancha_2" ID="{89E1D65C-8BAA-424A-8122-3B96F5DA7A2F}">
+					<ChildrenList>
+						<Action Name="" ID="{04C47BCC-DD1C-4C28-A0A4-6EE69B27C9AC}" ShortID="756520016">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FoodTruck_MeatGrill_2" ID="{7DB3C8AA-0321-4AD5-BB52-04A5CF727B8B}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FoodTruck_Meat_Plancha_3" ID="{E05086DD-2444-40F5-AB90-1C38DA6415E0}">
+					<ChildrenList>
+						<Action Name="" ID="{50EE0BC4-2FD4-4A2D-97BC-1AF286772C80}" ShortID="1000586750">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FoodTruck_MeatGrill_3" ID="{CD25E99A-FAED-4999-AD59-E3A9F72672BC}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FoodTruck_Meat_Plancha_4" ID="{11B00FAC-B51F-4E5C-8FF5-2DA08FF0E56E}">
+					<ChildrenList>
+						<Action Name="" ID="{7CD27C8B-B97E-4D12-A467-3048B45390AC}" ShortID="406281724">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FoodTruck_MeatGrill_4" ID="{96F8E1DE-C6EF-4E4B-8880-314A0B8BB003}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_FoodTruck_OilBrn_1" ID="{A46A336F-4D14-4C2C-A220-4AFA59AF0BD3}">
+					<ChildrenList>
+						<Action Name="" ID="{C0BF1AF1-52FA-4E8C-A363-09D7A24B562C}" ShortID="160205279">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FoodTruck_OilBrn_1" ID="{1EDC525C-5DCE-4A01-B991-DF1627B91FD6}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_FoodTruck_OilBrn_2" ID="{11A9B665-F8E0-41EA-AFA9-ACCAFF6A9CE8}">
+					<ChildrenList>
+						<Action Name="" ID="{1757FC37-CECE-4FB6-AAC8-B030396EC5DF}" ShortID="532553878">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_FoodTruck_OilBrn_2" ID="{E0D3EADA-6985-498A-AF7D-7F8F0F5701F3}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Ambience" ID="{296BE0DF-6203-44F7-B9F8-20CCC8451A8E}">
+					<ChildrenList>
+						<Action Name="" ID="{961EC865-F099-453C-AE12-0EFAC31F9908}" ShortID="119764398">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Birds_Randomizer" ID="{6AB911DD-0938-429F-8AF7-5A2070FB0DCD}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B7255F69-A041-4D6C-908F-3C19DA9C6BCD}" ShortID="1054485617">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Dogs_Randomizer" ID="{E42CD0ED-CF3B-4F5D-8016-1EE5F986C258}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5ACE1A3B-9F4E-4C70-99BA-F476120434E5}" ShortID="155684245">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Ambience_Street_Loop" ID="{C2F081A0-8199-4EF7-B915-486FD9434B9A}" WorkUnitID="{2EE5BC06-70CA-4EEE-AA40-4F40DCDAF1FF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music" ID="{5ED67B4C-934A-4DDE-9109-2593D5C1BA05}">
+					<ChildrenList>
+						<Action Name="" ID="{06EE0366-1151-481D-A386-E6566DCE1E4B}" ShortID="261216606">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main_Theme_1" ID="{0AF2DAF6-A9DA-4B8C-845B-69E1D5A95833}" WorkUnitID="{E5B043B6-5D0B-4FB2-89B2-56E443056326}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Music" ID="{88EF6320-13F0-43EE-9C3F-FB851F37CC67}">
+					<ChildrenList>
+						<Action Name="" ID="{2299A649-77E9-4FBB-B7B8-9F4613993221}" ShortID="209906300">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main_Theme" ID="{7486C293-DC8B-46BE-9064-E0DD513ED4BC}" WorkUnitID="{E5B043B6-5D0B-4FB2-89B2-56E443056326}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

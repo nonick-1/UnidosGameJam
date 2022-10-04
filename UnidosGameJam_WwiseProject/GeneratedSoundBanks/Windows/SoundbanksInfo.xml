@@ -8,7 +8,12 @@
 		<ExternalSourcesOutputRoot>/Users/josueemmanuelle/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/UnidosGameJam/UnidosGameJam_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
+	<StreamedFiles>
+		<File Id="88919031" Language="SFX">
+			<ShortName>SFX_Ambience_Street_Loop.wav</ShortName>
+			<Path>SFX/SFX_Ambience_Street_Loop_A496978B.wem</Path>
+		</File>
+	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
 		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
@@ -16,16 +21,204 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2469504869" Language="SFX" Hash="1384818260">
+		<SoundBank Id="2469504869" Language="SFX" Hash="3619024381">
 			<ObjectPath>\SoundBanks\Default Work Unit\Master_SoundBank</ObjectPath>
 			<ShortName>Master_SoundBank</ShortName>
 			<Path>Master_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1550126206" Name="Play_AmbienceTest" ObjectPath="\Events\Default Work Unit\Play_AmbienceTest" DurationType="Infinite">
+				<Event Id="1197313924" Name="FoodTruck_01" ObjectPath="\Events\Default Work Unit\FoodTruck_01" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2548292264" Name="FoodTruck_Meat_Plancha_1" ObjectPath="\Events\Default Work Unit\FoodTruck_Meat_Plancha_1" DurationType="OneShot" DurationMin="10.844563" DurationMax="10.844563">
 					<IncludedMemoryFiles>
-						<File Id="476193791" Language="SFX">
-							<ShortName>AMBIENCE INSIDE_01.wav</ShortName>
-							<Path>SFX/AMBIENCE INSIDE_01_8F45830E.wem</Path>
+						<File Id="228828175" Language="SFX">
+							<ShortName>SFX_FoodTruck_MeatGrill_1.wav</ShortName>
+							<Path>SFX/SFX_FoodTruck_MeatGrill_1_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2548292267" Name="FoodTruck_Meat_Plancha_2" ObjectPath="\Events\Default Work Unit\FoodTruck_Meat_Plancha_2" DurationType="OneShot" DurationMin="10.844563" DurationMax="10.844563">
+					<IncludedMemoryFiles>
+						<File Id="501510823" Language="SFX">
+							<ShortName>SFX_FoodTruck_MeatGrill_2.wav</ShortName>
+							<Path>SFX/SFX_FoodTruck_MeatGrill_2_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2548292266" Name="FoodTruck_Meat_Plancha_3" ObjectPath="\Events\Default Work Unit\FoodTruck_Meat_Plancha_3" DurationType="OneShot" DurationMin="9.548333" DurationMax="9.548333">
+					<IncludedMemoryFiles>
+						<File Id="128487946" Language="SFX">
+							<ShortName>SFX_FoodTruck_MeatGrill_4.wav</ShortName>
+							<Path>SFX/SFX_FoodTruck_MeatGrill_4_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2548292269" Name="FoodTruck_Meat_Plancha_4" ObjectPath="\Events\Default Work Unit\FoodTruck_Meat_Plancha_4" DurationType="OneShot" DurationMin="8.326771" DurationMax="8.326771">
+					<IncludedMemoryFiles>
+						<File Id="562978372" Language="SFX">
+							<ShortName>SFX_FoodTruck_MeatGrill_5.wav</ShortName>
+							<Path>SFX/SFX_FoodTruck_MeatGrill_5_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience" DurationType="Infinite">
+					<ReferencedStreamedFiles>
+						<File Id="88919031" Language="SFX">
+							<ShortName>SFX_Ambience_Street_Loop.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Street_Loop_A496978B.wem</Path>
+						</File>
+					</ReferencedStreamedFiles>
+					<IncludedMemoryFiles>
+						<File Id="96095838" Language="SFX">
+							<ShortName>SFX_Ambience_Birds_Robin_4.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Birds_Robin_4_0C687CAD.wem</Path>
+						</File>
+						<File Id="229618038" Language="SFX">
+							<ShortName>SFX_Ambience_Dogs_2.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Dogs_2_0C687CAD.wem</Path>
+						</File>
+						<File Id="303959394" Language="SFX">
+							<ShortName>SFX_Ambience_Dogs_5.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Dogs_5_0C687CAD.wem</Path>
+						</File>
+						<File Id="372036463" Language="SFX">
+							<ShortName>SFX_Ambience_Dogs_6.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Dogs_6_0C687CAD.wem</Path>
+						</File>
+						<File Id="391421355" Language="SFX">
+							<ShortName>SFX_Ambience_Birds_Robin_7.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Birds_Robin_7_0C687CAD.wem</Path>
+						</File>
+						<File Id="401258598" Language="SFX">
+							<ShortName>SFX_Ambience_Dogs_8.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Dogs_8_0C687CAD.wem</Path>
+						</File>
+						<File Id="473957060" Language="SFX">
+							<ShortName>SFX_Ambience_Dogs_7.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Dogs_7_0C687CAD.wem</Path>
+						</File>
+						<File Id="513321040" Language="SFX">
+							<ShortName>SFX_Ambience_Birds_Robin_6.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Birds_Robin_6_0C687CAD.wem</Path>
+						</File>
+						<File Id="637404671" Language="SFX">
+							<ShortName>SFX_Ambience_Birds_Robin_5.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Birds_Robin_5_0C687CAD.wem</Path>
+						</File>
+						<File Id="675514432" Language="SFX">
+							<ShortName>SFX_Ambience_Dogs_1.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Dogs_1_0C687CAD.wem</Path>
+						</File>
+						<File Id="690191480" Language="SFX">
+							<ShortName>SFX_Ambience_Birds_Robin_1.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Birds_Robin_1_0C687CAD.wem</Path>
+						</File>
+						<File Id="725691109" Language="SFX">
+							<ShortName>SFX_Ambience_Birds_Robin_3.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Birds_Robin_3_0C687CAD.wem</Path>
+						</File>
+						<File Id="734973571" Language="SFX">
+							<ShortName>SFX_Ambience_Dogs_3.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Dogs_3_0C687CAD.wem</Path>
+						</File>
+						<File Id="749448244" Language="SFX">
+							<ShortName>SFX_Ambience_Birds_Robin_2.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Birds_Robin_2_0C687CAD.wem</Path>
+						</File>
+						<File Id="1005966788" Language="SFX">
+							<ShortName>SFX_Ambience_Dogs_4.wav</ShortName>
+							<Path>SFX/SFX_Ambience_Dogs_4_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="116777365" Language="SFX">
+							<ShortName>Randy Sharp - Rohi.wav</ShortName>
+							<Path>SFX/Randy Sharp - Rohi_A496978B.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2895723152" Name="Play_SFX_FoodTruck_OilBrn_1" ObjectPath="\Events\Default Work Unit\Play_SFX_FoodTruck_OilBrn_1" DurationType="OneShot" DurationMin="14.626104" DurationMax="14.626104">
+					<IncludedMemoryFiles>
+						<File Id="456082623" Language="SFX">
+							<ShortName>SFX_FoodTruck_OilBrn_1.wav</ShortName>
+							<Path>SFX/SFX_FoodTruck_OilBrn_1_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2895723155" Name="Play_SFX_FoodTruck_OilBrn_2" ObjectPath="\Events\Default Work Unit\Play_SFX_FoodTruck_OilBrn_2" DurationType="OneShot" DurationMin="13.251" DurationMax="13.251">
+					<IncludedMemoryFiles>
+						<File Id="873891587" Language="SFX">
+							<ShortName>SFX_FoodTruck_OilBrn_2.wav</ShortName>
+							<Path>SFX/SFX_FoodTruck_OilBrn_2_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\Stop_Ambience" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3160767208" Name="UI_Button_Negative_1" ObjectPath="\Events\Default Work Unit\UI_Button_Negative_1" DurationType="OneShot" DurationMin="0.26525" DurationMax="0.26525">
+					<IncludedMemoryFiles>
+						<File Id="144068919" Language="SFX">
+							<ShortName>UI\SFX_UI_Button_Negative_1.wav</ShortName>
+							<Path>SFX/UI/SFX_UI_Button_Negative_1_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3160767211" Name="UI_Button_Negative_2" ObjectPath="\Events\Default Work Unit\UI_Button_Negative_2" DurationType="OneShot" DurationMin="0.300583" DurationMax="0.300583">
+					<IncludedMemoryFiles>
+						<File Id="821681110" Language="SFX">
+							<ShortName>UI\SFX_UI_Button_Negative_2.wav</ShortName>
+							<Path>SFX/UI/SFX_UI_Button_Negative_2_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3160767210" Name="UI_Button_Negative_3" ObjectPath="\Events\Default Work Unit\UI_Button_Negative_3" DurationType="OneShot" DurationMin="0.248458" DurationMax="0.248458">
+					<IncludedMemoryFiles>
+						<File Id="880395751" Language="SFX">
+							<ShortName>UI\SFX_UI_Button_Negative_3.wav</ShortName>
+							<Path>SFX/UI/SFX_UI_Button_Negative_3_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3160767213" Name="UI_Button_Negative_4" ObjectPath="\Events\Default Work Unit\UI_Button_Negative_4" DurationType="OneShot" DurationMin="0.279729" DurationMax="0.279729">
+					<IncludedMemoryFiles>
+						<File Id="218471459" Language="SFX">
+							<ShortName>UI\SFX_UI_Button_Negative_4.wav</ShortName>
+							<Path>SFX/UI/SFX_UI_Button_Negative_4_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3160767212" Name="UI_Button_Negative_5" ObjectPath="\Events\Default Work Unit\UI_Button_Negative_5" DurationType="OneShot" DurationMin="0.294208" DurationMax="0.294208">
+					<IncludedMemoryFiles>
+						<File Id="294380376" Language="SFX">
+							<ShortName>UI\SFX_UI_Button_Negative_5.wav</ShortName>
+							<Path>SFX/UI/SFX_UI_Button_Negative_5_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1451237120" Name="UI_Button_Positive_1" ObjectPath="\Events\Default Work Unit\UI_Button_Positive_1" DurationType="OneShot" DurationMin="0.207333" DurationMax="0.207333">
+					<IncludedMemoryFiles>
+						<File Id="1002508118" Language="SFX">
+							<ShortName>UI\SFX_UI_Button_Positive_7.wav</ShortName>
+							<Path>SFX/UI/SFX_UI_Button_Positive_7_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="278617630" Name="Play_Ambience" ObjectPath="\Events\Default Work Unit\Play_Ambience"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="1451237123" Name="UI_Button_Positive_2" ObjectPath="\Events\Default Work Unit\UI_Button_Positive_2" DurationType="OneShot" DurationMin="0.168542" DurationMax="0.168542">
+					<IncludedMemoryFiles>
+						<File Id="830214635" Language="SFX">
+							<ShortName>UI\SFX_UI_Button_Positive_5.wav</ShortName>
+							<Path>SFX/UI/SFX_UI_Button_Positive_5_0C687CAD.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1451237122" Name="UI_Button_Positive_3" ObjectPath="\Events\Default Work Unit\UI_Button_Positive_3" DurationType="OneShot" DurationMin="0.205604" DurationMax="0.205604">
+					<IncludedMemoryFiles>
+						<File Id="288482503" Language="SFX">
+							<ShortName>UI\SFX_UI_Button_Positive_6.wav</ShortName>
+							<Path>SFX/UI/SFX_UI_Button_Positive_6_0C687CAD.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae93dfaa5ec2f9b44b0c93907e00aeba, type: 3}
+  m_Name: F88768DE-4A02-476D-B681-FA0F8845AC75
+  m_EditorClassIdentifier: 
+  objectName: UI_Button_Negative_1
+  id: 3160767208
+  guid: F88768DE-4A02-476D-B681-FA0F8845AC75

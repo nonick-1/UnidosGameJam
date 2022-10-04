@@ -1,6 +1,56 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1550126206	Play_AmbienceTest			\Default Work Unit\Play_AmbienceTest	
+	278617630	Play_Ambience			\Default Work Unit\Play_Ambience	
+	1197313924	FoodTruck_01			\Default Work Unit\FoodTruck_01	
+	1451237120	UI_Button_Positive_1			\Default Work Unit\UI_Button_Positive_1	
+	1451237122	UI_Button_Positive_3			\Default Work Unit\UI_Button_Positive_3	
+	1451237123	UI_Button_Positive_2			\Default Work Unit\UI_Button_Positive_2	
+	2477713992	Stop_Ambience			\Default Work Unit\Stop_Ambience	
+	2548292264	FoodTruck_Meat_Plancha_1			\Default Work Unit\FoodTruck_Meat_Plancha_1	
+	2548292266	FoodTruck_Meat_Plancha_3			\Default Work Unit\FoodTruck_Meat_Plancha_3	
+	2548292267	FoodTruck_Meat_Plancha_2			\Default Work Unit\FoodTruck_Meat_Plancha_2	
+	2548292269	FoodTruck_Meat_Plancha_4			\Default Work Unit\FoodTruck_Meat_Plancha_4	
+	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
+	2895723152	Play_SFX_FoodTruck_OilBrn_1			\Default Work Unit\Play_SFX_FoodTruck_OilBrn_1	
+	2895723155	Play_SFX_FoodTruck_OilBrn_2			\Default Work Unit\Play_SFX_FoodTruck_OilBrn_2	
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	3160767208	UI_Button_Negative_1			\Default Work Unit\UI_Button_Negative_1	
+	3160767210	UI_Button_Negative_3			\Default Work Unit\UI_Button_Negative_3	
+	3160767211	UI_Button_Negative_2			\Default Work Unit\UI_Button_Negative_2	
+	3160767212	UI_Button_Negative_5			\Default Work Unit\UI_Button_Negative_5	
+	3160767213	UI_Button_Negative_4			\Default Work Unit\UI_Button_Negative_4	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	476193791	AMBIENCE INSIDE_01	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\AMBIENCE INSIDE_01_8F45830E.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMBIENCE INSIDE_01		1207681
+	96095838	SFX_Ambience_Birds_Robin_4	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Birds_Robin_4_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Birds_Randomizer\SFX_Ambience_Birds_Robin_4		40348
+	116777365	Randy Sharp - Rohi	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\Randy Sharp - Rohi_A496978B.wem		\Interactive Music Hierarchy\Default Work Unit\Main_Theme_1\Main_Theme\Randy Sharp - Rohi		4236498
+	128487946	SFX_FoodTruck_MeatGrill_3	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_FoodTruck_MeatGrill_4_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\FoodTruck\SFX_FoodTruck_MeatGrill_3		211901
+	144068919	SFX_UI_Button_Negative_1	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\UI\SFX_UI_Button_Negative_1_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\SFX_UI_Button_Negative_1		10872
+	218471459	SFX_UI_Button_Negative_4	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\UI\SFX_UI_Button_Negative_4_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\SFX_UI_Button_Negative_4		11154
+	228828175	SFX_FoodTruck_MeatGrill_1	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_FoodTruck_MeatGrill_1_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\FoodTruck\SFX_FoodTruck_MeatGrill_1		266503
+	229618038	SFX_Ambience_Dogs_2	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Dogs_2_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Dogs_Randomizer\SFX_Ambience_Dogs_2		25270
+	288482503	SFX_UI_Button_Positive_3	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\UI\SFX_UI_Button_Positive_6_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\SFX_UI_Button_Positive_3		5617
+	294380376	SFX_UI_Button_Negative_5	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\UI\SFX_UI_Button_Negative_5_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\SFX_UI_Button_Negative_5		11978
+	303959394	SFX_Ambience_Dogs_5	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Dogs_5_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Dogs_Randomizer\SFX_Ambience_Dogs_5		60315
+	372036463	SFX_Ambience_Dogs_6	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Dogs_6_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Dogs_Randomizer\SFX_Ambience_Dogs_6		37741
+	391421355	SFX_Ambience_Birds_Robin_7	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Birds_Robin_7_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Birds_Randomizer\SFX_Ambience_Birds_Robin_7		33287
+	401258598	SFX_Ambience_Dogs_8	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Dogs_8_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Dogs_Randomizer\SFX_Ambience_Dogs_8		16431
+	456082623	SFX_FoodTruck_OilBrn_1	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_FoodTruck_OilBrn_1_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\FoodTruck\SFX_FoodTruck_OilBrn_1		527439
+	473957060	SFX_Ambience_Dogs_7	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Dogs_7_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Dogs_Randomizer\SFX_Ambience_Dogs_7		32698
+	501510823	SFX_FoodTruck_MeatGrill_2	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_FoodTruck_MeatGrill_2_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\FoodTruck\SFX_FoodTruck_MeatGrill_2		214697
+	513321040	SFX_Ambience_Birds_Robin_6	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Birds_Robin_6_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Birds_Randomizer\SFX_Ambience_Birds_Robin_6		33802
+	562978372	SFX_FoodTruck_MeatGrill_4	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_FoodTruck_MeatGrill_5_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\FoodTruck\SFX_FoodTruck_MeatGrill_4		201003
+	637404671	SFX_Ambience_Birds_Robin_5	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Birds_Robin_5_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Birds_Randomizer\SFX_Ambience_Birds_Robin_5		33981
+	675514432	SFX_Ambience_Dogs_1	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Dogs_1_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Dogs_Randomizer\SFX_Ambience_Dogs_1		31659
+	690191480	SFX_Ambience_Birds_Robin_1	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Birds_Robin_1_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Birds_Randomizer\SFX_Ambience_Birds_Robin_1		32758
+	725691109	SFX_Ambience_Birds_Robin_3	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Birds_Robin_3_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Birds_Randomizer\SFX_Ambience_Birds_Robin_3		48459
+	734973571	SFX_Ambience_Dogs_3	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Dogs_3_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Dogs_Randomizer\SFX_Ambience_Dogs_3		35270
+	749448244	SFX_Ambience_Birds_Robin_2	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Birds_Robin_2_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Birds_Randomizer\SFX_Ambience_Birds_Robin_2		34375
+	821681110	SFX_UI_Button_Negative_2	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\UI\SFX_UI_Button_Negative_2_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\SFX_UI_Button_Negative_2		11549
+	830214635	SFX_UI_Button_Positive_2	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\UI\SFX_UI_Button_Positive_5_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\SFX_UI_Button_Positive_2		4305
+	873891587	SFX_FoodTruck_OilBrn_2	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_FoodTruck_OilBrn_2_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\FoodTruck\SFX_FoodTruck_OilBrn_2		429353
+	880395751	SFX_UI_Button_Negative_3	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\UI\SFX_UI_Button_Negative_3_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\SFX_UI_Button_Negative_3		10817
+	1002508118	SFX_UI_Button_Positive_1	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\UI\SFX_UI_Button_Positive_7_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\SFX_UI_Button_Positive_1		4971
+	1005966788	SFX_Ambience_Dogs_4	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Dogs_4_0C687CAD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Ambience_Dogs_Randomizer\SFX_Ambience_Dogs_4		19956
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	88919031	SFX_Ambience_Street_Loop	Y:\Documents\GitHub\UnidosGameJam\UnidosGameJam_WwiseProject\.cache\Windows\SFX\SFX_Ambience_Street_Loop_A496978B.wem	88919031.wem	\Actor-Mixer Hierarchy\Default Work Unit\Ambience\SFX_Ambience_Street_Loop	
 
