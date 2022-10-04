@@ -12,14 +12,12 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject gamePlayMenu;
+    [SerializeField] GameObject gameOverMenu;
 
     [SerializeField] TextMeshProUGUI successfulText;
     [SerializeField] TextMeshProUGUI failedText;
 
-    [SerializeField] Slider progressSlider;
-
     int failedMeals, successedMeals;
-    float destinationRate = 0.025f;
 
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
@@ -30,9 +28,7 @@ public class UIManager : MonoBehaviour
     {
         mainMenu.SetActive(true);
         gamePlayMenu.SetActive(false);
-
-        // Starts the timer automatically
-        timerIsRunning = true;
+        gameOverMenu.SetActive(false);
     }
 
     void Update()
@@ -49,8 +45,30 @@ public class UIManager : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                ShowGameOverScreen();
             }
         }
+    }
+
+    public void ResetGame()
+    {
+        mainMenu.gameObject.SetActive(false);
+        gamePlayMenu.gameObject.SetActive(true);
+        gameOverMenu.gameObject.SetActive(false);
+
+        // Starts the timer automatically
+        timerIsRunning = true;
+        timeRemaining = 70f;
+
+        successedMeals = 0;
+        failedMeals = 0;
+    }
+
+    void ShowGameOverScreen()
+    {
+        mainMenu.gameObject.SetActive(false);
+        gamePlayMenu.gameObject.SetActive(false);
+        gameOverMenu.gameObject.SetActive(true);
     }
 
     void DisplayTime(float timeToDisplay)
@@ -97,8 +115,18 @@ public class UIManager : MonoBehaviour
     public void StartButtonPress()
     {
         Debug.Log("Pressed!");
+
+        ResetGame();
+
+        if(Picker.Instance.GetCurrentHeldItem() != null)
+            Picker.Instance.SetCurrentHeldItem(null, true);
+
         mainMenu.SetActive(false);
         gamePlayMenu.SetActive(true);
+        gameOverMenu.SetActive(false);
         onStart?.Invoke();
+
+        // Starts the timer automatically
+        timerIsRunning = true;
     }
 }

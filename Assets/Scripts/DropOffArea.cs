@@ -7,6 +7,28 @@ public class DropOffArea : MonoBehaviour
     [SerializeField] protected List<ItemType> ingredientAllowed;
     [SerializeField] protected List<AreaPosition> itemPositions;
 
+    private void OnEnable()
+    {
+        UIManager.onStart += CleanArea;
+    }
+
+    private void OnDisable()
+    {
+        UIManager.onStart -= CleanArea;
+    }
+
+    public void CleanArea()
+    {
+        foreach(var position in itemPositions)
+        {
+            if(position.isPositionTaken)
+            {
+                Destroy(position.position.transform.GetChild(0).gameObject);
+                position.isPositionTaken = false;
+            }
+        }
+    }
+
     //Sets Vacant Position for Item
     public virtual bool IsAbleToPlaceItem(Item currentHeldIngredient)
     {

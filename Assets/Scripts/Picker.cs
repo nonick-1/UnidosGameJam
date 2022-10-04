@@ -99,7 +99,8 @@ public class Picker : MonoBehaviour
         if (removedChild)
         {
             GameObject foodIngredientOnPlate = Handler.gameObject.transform.GetChild(0).gameObject;
-            Destroy(foodIngredientOnPlate);
+            if(foodIngredientOnPlate != null)
+                Destroy(foodIngredientOnPlate);
         }
     }
 }
