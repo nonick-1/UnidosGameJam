@@ -1301,7 +1301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &477925637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3852,7 +3852,6 @@ MonoBehaviour:
   gameOverMenu: {fileID: 477925636}
   successfulText: {fileID: 783504738}
   failedText: {fileID: 285994157}
-  progressSlider: {fileID: 0}
   timeRemaining: 5
   timerIsRunning: 0
   timeText: {fileID: 1083989558}
@@ -5202,7 +5201,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1663496909
 RectTransform:
   m_ObjectHideFlags: 0
