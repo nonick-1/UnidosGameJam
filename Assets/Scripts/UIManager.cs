@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,7 +16,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI successfulText;
     [SerializeField] TextMeshProUGUI failedText;
 
+    [SerializeField] Slider progressSlider;
+
     int failedMeals, successedMeals;
+    float destinationRate = 0.025f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +28,24 @@ public class UIManager : MonoBehaviour
         gamePlayMenu.SetActive(false);
     }
 
+    public void AddMoreTime()
+    {
+        progressSlider.value -= 0.1f;
+    }
+
     private void OnEnable()
     {
         Character.onSuccessfulOrder += UpdateSuccessfulText;
+        //Character.onSuccessfulOrder += AddMoreTime;
+
         Character.onFailedOrder += UpdateFailedText;
     }
 
     private void OnDisable()
     {
         Character.onSuccessfulOrder -= UpdateSuccessfulText;
+        //Character.onSuccessfulOrder -= AddMoreTime;
+
         Character.onFailedOrder -= UpdateFailedText;
     }
 

@@ -75,9 +75,8 @@ public class Food : Item
 
     public override void HoverInteraction()
     {
-        if (currentHoveredEquipment)
+        if (currentHoveredEquipment && currentHoveredEquipment.IsAbleToPlaceItem(this))
         {
-            currentHoveredEquipment.IsAbleToPlaceItem(this);
             isCooking = true;
             Debug.Log("Is cooking tortilla!");
         }

@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using DG.Tweening;
 using UnityEngine.Events;
+using TMPro;
 
 public class Character : MonoBehaviour
 {
@@ -15,9 +16,10 @@ public class Character : MonoBehaviour
 
     [SerializeField] List<TacoOrders> possibleTacoCombinations;
     [SerializeField] List<Sprite> characterOptions;
+    [SerializeField] List<TextMeshProUGUI> foodIngredients;
 
     [SerializeField] SpriteRenderer chatBubble;
-    [SerializeField] SpriteRenderer foodOrder;
+    //[SerializeField] SpriteRenderer foodOrder;
     SpriteRenderer spriteRenderer;
 
     Sprite previousSprite;
@@ -110,6 +112,53 @@ public class Character : MonoBehaviour
         chatBubble.DOFade(0, tweenEndFade).OnComplete(() => callback?.Invoke());
     }
 
+    private void SetIngredientList(TacoOrders tacoOrder)
+    {
+        foreach(var foodText in foodIngredients)
+        {
+            foodText.text = "";
+        }
+
+        for (int indexIngredient = 0; indexIngredient < tacoOrder.ingredientsNeeded.Count; indexIngredient++)
+        {
+            ItemType ingredientType = tacoOrder.ingredientsNeeded[indexIngredient];
+            string ingrdientFormatted = "";
+            switch (ingredientType)
+            {
+                case ItemType.Tortilla:
+                    ingrdientFormatted = "Tortilla";
+                    break;
+                case ItemType.AlPastor:
+                    ingrdientFormatted = "Al Pastor";
+                    break;
+                case ItemType.Onions:
+                    ingrdientFormatted = "Onions";
+                    break;
+                case ItemType.Cilantro:
+                    ingrdientFormatted = "Cilantro";
+                    break;
+                case ItemType.Shrimp:
+                    ingrdientFormatted = "Shrimp";
+                    break;
+                case ItemType.CarneAsada:
+                    ingrdientFormatted = "Carne Asada";
+                    break;
+                case ItemType.SalsaRojo:
+                    ingrdientFormatted = "Salsa Rojo";
+                    break;
+                case ItemType.SalsaVerde:
+                    ingrdientFormatted = "Salsa Verde";
+                    break;
+                case ItemType.Plates:
+                    break;
+                default:
+                    break;
+            }
+
+            foodIngredients[indexIngredient].text = ingrdientFormatted;
+        }
+    }
+
     private void SetPlateOrder()
     {
         Sprite newSprite = null;
@@ -131,7 +180,8 @@ public class Character : MonoBehaviour
 
         var randomIndex = Random.Range(0, possibleTacoCombinations.Count);
         currentOrder = possibleTacoCombinations[randomIndex];
-        foodOrder.sprite = currentOrder.finalTacoWanted;
+
+        SetIngredientList(currentOrder);
     }
 }
 
@@ -139,5 +189,5 @@ public class Character : MonoBehaviour
 public class TacoOrders
 {
     public List<ItemType> ingredientsNeeded;
-    public Sprite finalTacoWanted;
+    //public Sprite finalTacoWanted;
 }
