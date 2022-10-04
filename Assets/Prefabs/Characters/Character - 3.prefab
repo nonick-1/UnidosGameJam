@@ -221,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 2048327216359915830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.66, y: 5, z: 10.339722}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7113671431649069566}
@@ -271,7 +271,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a29c5a791824f55418af526a36c62c18, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -295,77 +295,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleTacoCombinations:
   - ingredientsNeeded: 0000000001000000
-    finalTacoWanted: {fileID: 21300000, guid: 6a50b02129ceef74bbf4dbc2319fbe7c, type: 3}
   - ingredientsNeeded: 000000000100000002000000
-    finalTacoWanted: {fileID: 21300000, guid: 94c657033697c8645a09768578066722, type: 3}
   - ingredientsNeeded: 000000000100000003000000
-    finalTacoWanted: {fileID: 21300000, guid: c7a341ec3db1a4440901f95c680e8c5e, type: 3}
   - ingredientsNeeded: 00000000010000000300000000000000
-    finalTacoWanted: {fileID: 21300000, guid: 177afb883dbddaa4185f0a1560cdcee8, type: 3}
   - ingredientsNeeded: 000000000100000006000000
-    finalTacoWanted: {fileID: 21300000, guid: 05c5f6b1353fb584cab35aaa762bd5d4, type: 3}
   - ingredientsNeeded: 000000000100000007000000
-    finalTacoWanted: {fileID: 21300000, guid: bd66d8a125db85746aa50ec60dbe1053, type: 3}
   - ingredientsNeeded: 01000000000000000200000006000000
-    finalTacoWanted: {fileID: 21300000, guid: 4cbfb9eff5a77e54b9b8a28740a36475, type: 3}
   - ingredientsNeeded: 00000000010000000600000003000000
-    finalTacoWanted: {fileID: 21300000, guid: 8ebeb94dd9866e5428abf40c452f0645, type: 3}
   - ingredientsNeeded: 00000000010000000200000007000000
-    finalTacoWanted: {fileID: 21300000, guid: 07dfb7a5afb9c2042bf94b6b6e1456bd, type: 3}
   - ingredientsNeeded: 00000000010000000300000007000000
-    finalTacoWanted: {fileID: 21300000, guid: 347d2aadacf8fb7439faaf9bc466be9e, type: 3}
   - ingredientsNeeded: 0000000006000000030000000100000002000000
-    finalTacoWanted: {fileID: 21300000, guid: 166ce702026e8344181c1dce48bfc85f, type: 3}
   - ingredientsNeeded: 0000000001000000020000000300000007000000
-    finalTacoWanted: {fileID: 21300000, guid: 73dfe4d43beaea542875e5433c9671dc, type: 3}
   - ingredientsNeeded: 0000000005000000
-    finalTacoWanted: {fileID: 21300000, guid: c4c6846841489c14db98cedb344128b0, type: 3}
   - ingredientsNeeded: 000000000500000002000000
-    finalTacoWanted: {fileID: 21300000, guid: 9880f8f319eb83344866b62a15f541c4, type: 3}
   - ingredientsNeeded: 000000000300000005000000
-    finalTacoWanted: {fileID: 21300000, guid: 40aed09c1dbdb6c4ea98752000f6dc72, type: 3}
   - ingredientsNeeded: 00000000020000000300000005000000
-    finalTacoWanted: {fileID: 21300000, guid: 3698b01aea2e84a468fb48ffc761ce26, type: 3}
   - ingredientsNeeded: 000000000500000006000000
-    finalTacoWanted: {fileID: 21300000, guid: f26a159ffb1b66c45ab58840b8d2f4de, type: 3}
   - ingredientsNeeded: 000000000500000007000000
-    finalTacoWanted: {fileID: 21300000, guid: 5e49f863edb4c9d44bd753e0ed8794c8, type: 3}
   - ingredientsNeeded: 00000000050000000200000006000000
-    finalTacoWanted: {fileID: 21300000, guid: 55fb3d61f697af344a3f5df43963ef48, type: 3}
   - ingredientsNeeded: 00000000050000000300000006000000
-    finalTacoWanted: {fileID: 21300000, guid: 4ca2dcc179102814ba6740e095b29246, type: 3}
   - ingredientsNeeded: 00000000050000000200000007000000
-    finalTacoWanted: {fileID: 21300000, guid: c0404baba50b0944794cd4503a071c4b, type: 3}
   - ingredientsNeeded: 00000000050000000300000007000000
-    finalTacoWanted: {fileID: 21300000, guid: 017a98997945bf04eb11bb237355cf72, type: 3}
   - ingredientsNeeded: 0000000005000000020000000300000006000000
-    finalTacoWanted: {fileID: 21300000, guid: 3138dd0a55ef7f644b6a2924492844d3, type: 3}
   - ingredientsNeeded: 0000000005000000020000000300000007000000
-    finalTacoWanted: {fileID: 21300000, guid: f0fa09feb1e12704d9ce3a55773fec46, type: 3}
   - ingredientsNeeded: 0000000004000000
-    finalTacoWanted: {fileID: 21300000, guid: dd6ec2a9216ac0045adc9a5def5b531e, type: 3}
   - ingredientsNeeded: 000000000500000002000000
-    finalTacoWanted: {fileID: 21300000, guid: 8554fc7a0a55ec548b3171646bb644e8, type: 3}
   - ingredientsNeeded: 000000000400000003000000
-    finalTacoWanted: {fileID: 21300000, guid: 19e5bf1dcfe02604eb1e56d841791b6f, type: 3}
   - ingredientsNeeded: 00000000040000000200000003000000
-    finalTacoWanted: {fileID: 21300000, guid: 96da4fb9b95dac249b3456e7790a2ec8, type: 3}
   - ingredientsNeeded: 000000000400000006000000
-    finalTacoWanted: {fileID: 21300000, guid: 58ab51da5d6311e45b612dd9180f3bda, type: 3}
   - ingredientsNeeded: 000000000400000007000000
-    finalTacoWanted: {fileID: 21300000, guid: ab76fa910d37d3c4facfcfc5c3f0e0fe, type: 3}
   - ingredientsNeeded: 00000000040000000200000006000000
-    finalTacoWanted: {fileID: 21300000, guid: 69ce247c3e6ff11478168c35e719fbf4, type: 3}
   - ingredientsNeeded: 00000000040000000300000006000000
-    finalTacoWanted: {fileID: 21300000, guid: 189f144fca5e10e4194f2fc789aa829a, type: 3}
   - ingredientsNeeded: 00000000040000000200000007000000
-    finalTacoWanted: {fileID: 21300000, guid: 38075f533f66ac14eae0f0bb10a6afbb, type: 3}
   - ingredientsNeeded: 00000000040000000300000007000000
-    finalTacoWanted: {fileID: 21300000, guid: 41e74fbe78d1a994b9b35a4636e57e9c, type: 3}
   - ingredientsNeeded: 0000000004000000020000000300000006000000
-    finalTacoWanted: {fileID: 21300000, guid: 2ca925a1257f412479edd990845f93f7, type: 3}
   - ingredientsNeeded: 0000000004000000020000000300000007000000
-    finalTacoWanted: {fileID: 21300000, guid: c5240e6306c33ce448193935cfa6789a, type: 3}
   characterOptions:
   - {fileID: 21300000, guid: 0edb44c041d93184e8341d659c8afa6c, type: 3}
   - {fileID: 21300000, guid: a29c5a791824f55418af526a36c62c18, type: 3}
@@ -506,7 +470,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 23de0e86cd77b0e43a16ae3a456d5275, type: 3}
-  m_Color: {r: 0.69803923, g: 0.27450982, b: 0.27450982, a: 1}
+  m_Color: {r: 0.9372549, g: 0.85882354, b: 0.77254903, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -790,8 +754,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283256141
+  m_fontColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -814,7 +778,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 0.05
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -925,8 +889,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283256141
+  m_fontColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -949,7 +913,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 0.05
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1060,8 +1024,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283256141
+  m_fontColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1084,7 +1048,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 0.05
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1195,8 +1159,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283256141
+  m_fontColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1219,7 +1183,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 0.05
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1330,8 +1294,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283256141
+  m_fontColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1354,7 +1318,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 0.05
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
